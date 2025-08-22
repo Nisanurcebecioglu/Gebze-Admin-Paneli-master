@@ -1,0 +1,248 @@
+table {
+  border-radius: 10px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 6px 6px 20px rgba(100, 100, 100, 0.738);
+}
+
+thead,
+tbody {
+  background-color: transparent;
+}
+
+table tr {
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+table tr:hover {
+  background-color: #cccccc;
+  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+table tr button {
+  transition: transform 0.3s ease !important;
+  transform: translate(0%, 0%);
+}
+
+table tr button:hover {
+  transition: transform 0.3s ease !important;
+  transform: scale(1.2);
+}
+
+.table-button {
+  background-color: rgba(0, 81, 255, 0.738);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease !important;
+}
+
+.table-button:hover {
+  background-color: rgba(0, 0, 0, 0.948);
+}
+
+.logo-img {
+  height: 200px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+}
+
+.index-img {
+  height: 70px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+  margin-right: 100px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: rgba(74, 130, 243, 0.344);
+  color: rgba(43, 42, 42, 0.692);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.36s ease !important;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #2d2525;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(236, 225, 225, 0.15);
+  z-index: 999;
+  min-width: 140px;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-title {
+  font-weight: bold;
+  padding: 10px 12px 5px;
+  font-size: 13px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.badge {
+  background-color: #21d18538;
+
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.arşiv {
+  background-color: #7d373769;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.ekle-butonu,
+.arsivle-butonu,
+.sil-butonu {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgba(68, 127, 245, 0.495);
+  color: white;
+}
+
+.buton {
+  height: 36px;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 16px;
+  width: auto;
+  /* Genişlik içeriğe göre */
+  margin-right: 8px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  user-select: none;
+}
+
+.buton:hover {
+  transform: scale(1.1);
+  filter: brightness(85%);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+/* EKLE (artı) */
+.arti::before,
+.arti::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arti::before {
+  width: 2px;
+  height: 14px;
+}
+
+.arti::after {
+  width: 14px;
+  height: 2px;
+}
+
+/* ARŞİVLE (kutu) */
+.kutu::before,
+.kutu::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.kutu::before {
+  width: 14px;
+  height: 4px;
+  top: 4px;
+}
+
+.kutu::after {
+  width: 14px;
+  height: 8px;
+  top: 9px;
+}
+
+/* SİL SVG path renk beyaz */
+.sil-butonu svg path {
+  fill: white;
+}
+
+/* Renkler */
+.ekle-butonu {
+  background-color: #4caf50;
+}
+
+.arsivle-butonu {
+  background-color: #2196f3;
+}
+
+.sil-butonu {
+  background-color: #f44336;
+}

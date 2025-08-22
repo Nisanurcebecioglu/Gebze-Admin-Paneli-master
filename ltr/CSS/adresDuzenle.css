@@ -1,0 +1,414 @@
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.müdürlük-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.customCheckbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #007bff;
+  border-radius: 5px;
+}
+
+.customCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 15px;
+}
+
+.customCheckbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.customCheckbox input:checked ~ .checkmark {
+  background-color: #007bff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.customCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.customCheckbox .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+table tr:hover {
+  background-color: #cccccc !important;
+  transition: background-color 0.3s ease !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  border-radius: 10px !important;
+}
+
+.müdürlükText {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#ekleBtn:focus {
+  outline: none;
+}
+
+#silBtn:focus {
+  outline: none;
+}
+
+#submit,
+.btn-secondary {
+  min-width: 90px;
+  max-width: 120px;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.müdürlükButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.müdürlük-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* ikondan hemen sonra */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 999;
+  min-width: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.müdürlük-dropdown button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.müdürlük-dropdown button:hover {
+  background-color: #f1f1f1;
+}
+
+.müdürlükButton:focus {
+  outline: none;
+}
+
+.müdürlükButton {
+  width: 50px !important;
+  height: 35px;
+  border: none;
+  background-color: #35619c64;
+  border-radius: 50px !important;
+  font-size: 1px;
+  cursor: pointer;
+  margin-left: 10px;
+
+  transition: background-color 0.3s ease;
+}
+
+.adresTablosu {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  table-layout: fixed;
+}
+
+.adresTablosu th {
+  text-align: left;
+  padding: 12px 10px;
+  font-weight: bold;
+  background-color: #f5f1f167;
+  border-bottom: 1px solid #ccc;
+}
+
+.adresTablosu td {
+  padding: 14px 10px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+}
+
+.adresTablosu td.konum {
+  text-align: center;
+  width: 50px;
+}
+
+.adresTablosu img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.adresTablosu svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.editButton {
+  padding: 6px 12px;
+  background: #35619c64;
+  border: none;
+  cursor: pointer;
+  float: right;
+  border-radius: 7px;
+}
+
+.editButton:hover {
+  background: #35619c9c;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.editButton:focus {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.adresTablosu tr:last-child td {
+  border-bottom: none;
+}
+
+.DHNDüzenle {
+  margin-left: 10px;
+  margin-right: 200px;
+  margin-top: 15px;
+  width: 97.5%;
+}
+
+.adresButton {
+  width: 40px;
+  height: 40px;
+  background-color: #55ef579e;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.adresButton:hover {
+  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: #75e759d0;
+}
+
+.adresButton:focus {
+  background-color: #6ff84dc4;
+}
+
+.adresButton:focus,
+.adresButton:focus-visible {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+table {
+  border-radius: 10px;
+}
+
+table tr {
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+table tr:hover {
+  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+table tr button {
+  transition: transform 0.3s ease !important;
+  transform: translate(0%, 0%);
+}
+
+table tr button:hover {
+  transition: transform 0.3s ease !important;
+  transform: translate(-5%, 0%);
+  transform: scale(1.1);
+}
+
+table tr input {
+  transition: transform 0.5s ease;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 6px 6px 20px rgba(100, 100, 100, 0.738);
+}
+
+table tr input:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.02);
+}
+
+table tr input:focus {
+  transform: scale(1.02);
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #ffcc7f84;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  background-color: #ffcc7fcf;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 999;
+  min-width: 140px;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-title {
+  font-weight: bold;
+  padding: 10px 12px 5px;
+  font-size: 13px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.buttons {
+  margin-top: 20px;
+  float: right;
+}
+
+.input {
+  background-color: #f3f1f18b;
+  border: none;
+  box-shadow: 4px 4px 10px rgba(100, 100, 100, 0.295);
+  border-radius: 5px;
+}
+
+#mudurlukList {
+  column-count: 4;
+  column-gap: 20px;
+  width: 1000px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 500px;
+}
+
+#mudurlukListe li {
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  break-inside: avoid;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+#mudurlukUl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

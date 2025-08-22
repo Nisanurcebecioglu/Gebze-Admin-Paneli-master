@@ -1,0 +1,261 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    /* Overlay için */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-photo-section {
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    /* Tıklanabilir olduğunu belirtmek için */
+}
+
+.profile-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    /* Overlay'ı da yuvarlak yap */
+}
+
+.profile-photo-wrapper:hover .edit-overlay {
+    opacity: 1;
+}
+
+.edit-overlay i {
+    color: #fff;
+    font-size: 36px;
+}
+
+.form-group-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+.form-group-container input[type="text"],
+.form-group-container input[type="email"],
+.form-group-container input[type="tel"],
+.form-group-container input[type="password"] {
+    width: calc(100% - 2px);
+    /* Padding'i hesaba kat */
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Padding'in genişliğe dahil edilmesini sağlar */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group-container input:focus {
+    border-color: #007bff;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    width: calc(100% - 45px);
+    /* İkon için yer bırak */
+    padding-right: 40px;
+    /* İkonun üzerine binmemesi için */
+}
+
+.input-with-icon i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    /* İkonların tıklanabilir olduğunu belirtmek için */
+}
+
+.green-icon {
+    color: #28a745;
+    /* Yeşil tik */
+}
+
+.red-icon {
+    color: #dc3545;
+    /* Kırmızı çarpı */
+}
+
+.password-toggle-icon {
+    color: #6c757d;
+    /* Göz ikonunun rengi */
+}
+
+.link-group {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.link-group a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.link-group a:hover {
+    color: #0056b3;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.save-button {
+    background-color: #3f92ec;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    width: 50%;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 25px;
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .save-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translateX(-50%);
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 10;
+    transition: opacity 1s ease;
+}
+
+.popup-header {
+    background-color: red;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.popup-body {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.popup-body button {
+    background-color: white;
+    border: none;
+    color: rgb(50, 196, 50);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icon-container {
+    /* position: relative; */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-container:hover .popup {
+    display: inline-block;
+
+}
+
+.popup-header-onaylandi {
+    background-color: rgb(13, 216, 13);
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}

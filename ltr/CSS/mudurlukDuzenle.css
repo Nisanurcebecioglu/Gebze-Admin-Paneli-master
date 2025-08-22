@@ -1,0 +1,349 @@
+.yonetmelik-save-btn {
+  background: #2041c7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.yonetmelik-edit-btn {
+  background: #ececec;
+  color: #2041c7;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.yonetmelik-textarea {
+  width: 100%;
+  min-width: 400px;
+  min-height: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 17px;
+}
+
+.yonetmelik-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+}
+
+.yonetmelik-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-save-btn {
+  background: #2041c7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bio-edit-btn {
+  background: #ececec;
+  color: #2041c7;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bio-textarea {
+  width: 100%;
+  min-width: 400px;
+  min-height: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 17px;
+}
+
+.bio-model-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+}
+
+.bio-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainDiv {
+  background: #fff;
+  border-radius: 14px;
+  padding: 48px 36px 36px 36px;
+  min-width: 520px;
+  max-width: 98vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdownYonetmelikBtn {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.dropdownBioBtn {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.dropdown-content-bio {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 110%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  text-align: left;
+}
+
+.dropdownBtnBio {
+  height: 40px;
+  
+  padding: 6px;
+  background: #ececec;
+  overflow: hidden;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+
+}
+
+.dropdownBtnBio img {
+   width: 24px !important;
+  height: 24px !important;
+  margin-top: 15px;
+}
+
+.dropdownCancel {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.dropdownSaveChanges {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.dropdownPhotoChange {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 110%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  text-align: left;
+}
+
+.dropdownBtn {
+  padding: 6px;
+  background: #ececec;
+  color: #ea5b23;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.dropdownBtn img {
+  width: 24px !important;
+  height: 24px !important;
+  margin-top: 15px;
+}
+
+.dropdowns-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 18px;
+}
+
+body {
+  padding-bottom: none !important;
+  padding-top: none !important;
+}
+
+.logo-img {
+  height: 200px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+}
+
+.index-img {
+  height: 70px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+  margin-right: 100px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.card input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.card button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.photo-btn {
+  background-color: #5a5ad4;
+  color: white;
+}
+
+.save-btn {
+  background-color: #6f42c1;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+.file-input {
+  display: none;
+}
+.dropdownBtnBio:focus {
+  outline: none;
+}
+.dropdownBtn:focus {
+  outline: none;
+}

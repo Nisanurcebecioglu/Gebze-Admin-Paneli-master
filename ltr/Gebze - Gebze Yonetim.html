@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <style>
+    .ekle-butonu,
+    .arsivle-butonu,
+    .sil-butonu {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+
+    html {
+      overflow-y: scroll;
+    }
+
+    table {
+      border-radius: 10px;
+      table-layout: fixed;
+    }
+
+    table tr {
+      transition: background-color 0.3s ease;
+      border-radius: 10px;
+    }
+
+    table tr:hover {
+      background-color: #cccccc;
+      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    table tr button {
+      transition: transform 0.3s ease !important;
+      transform: translate(0%, 0%);
+    }
+
+    table tr button:hover {
+      transition: transform 0.3s ease !important;
+      transform: scale(1.2);
+    }
+
+    .dot{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .logo-img {
+      height: 200px !important;
+      /* Boyutu küçültür */
+      object-fit: contain;
+      display: block;
+    }
+
+    .index-img {
+      height: 70px !important;
+      /* Boyutu küçültür */
+      object-fit: contain;
+      display: block;
+      margin-right: 100px;
+    }
+
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      background-color: rgba(68, 127, 245, 0.341);
+      color: blacks;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+      min-width: 140px;
+    }
+
+    .dropdown-menu button {
+      width: 100%;
+      padding: 8px 12px;
+      border: none;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .dropdown-menu button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .menu-title {
+      font-weight: bold;
+      padding: 10px 12px 5px;
+      font-size: 13px;
+      color: black;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 5px;
+    }
+
+    .kategori {
+      background-color: #21d18538;
+
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+
+    .arşiv {
+      background-color: #7d373769;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 15px;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .dropdown-toggle:focus,
+    .dropdown-toggle:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+
+    .dropdown-toggle:hover {
+      background-color: rgba(68, 127, 245, 0.495);
+      color: white;
+    }
+
+    .buton {
+      height: 36px;
+      border-radius: 12px;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0 16px;
+      width: auto;
+      /* Genişlik içeriğe göre */
+      margin-right: 8px;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    .buton:hover {
+      transform: scale(1.1);
+      filter: brightness(85%);
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    /* EKLE (artı) */
+    .arti::before,
+    .arti::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      border-radius: 1px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .arti::before {
+      width: 2px;
+      height: 14px;
+    }
+
+    .arti::after {
+      width: 14px;
+      height: 2px;
+    }
+
+    /* ARŞİVLE (kutu) */
+    .kutu::before,
+    .kutu::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      border-radius: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .kutu::before {
+      width: 14px;
+      height: 4px;
+      top: 4px;
+    }
+
+    .kutu::after {
+      width: 14px;
+      height: 8px;
+      top: 9px;
+    }
+
+    /* SİL SVG path renk beyaz */
+    .sil-butonu svg path {
+      fill: white;
+    }
+
+    /* Renkler */
+    .ekle-butonu {
+      background-color: #4CAF50;
+    }
+
+    .arsivle-butonu {
+      background-color: #2196F3;
+    }
+
+    .sil-butonu {
+      background-color: #F44336;
+    }
+
+    .edit {
+      background-color: rgba(68, 127, 245, 0.347) !important;
+      transition: all 0.3s ease !important;
+      width: 90px !important;
+    }
+
+    .edit:hover {
+      background-color: rgba(68, 127, 245, 0.705);
+      transition: all 0.3s ease;
+      transform: scale(1.1);
+      color: white;
+    }
+
+    .select {
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid #ccc !important;
+        background-color: #f0f0f0 !important;
+        font-size: 16px;
+      }
+
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities." />
+  <meta name="keywords"
+    content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app" />
+  <meta name="author" content="pixelstrap" />
+  <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/images//gebze-belediyesi.ico" type="image/x-icon" />
+  <title>Gebze - Gebze Yönetim</title>
+  <!-- Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+  <!-- Font Awesome-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css" />
+  <!-- ico-font-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css" />
+  <!-- Themify icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify.css" />
+  <!-- Flag icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css" />
+  <!-- Feather icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css" />
+  <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css" />
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+  <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen" />
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
+</head>
+
+<body>
+  <!-- Loader starts-->
+  <div class="loader-wrapper">
+    <div class="loader bg-white">
+      <div class="whirly-loader"></div>
+    </div>
+  </div>
+  <!-- Loader ends-->
+  <!-- page-wrapper Start-->
+  <div class="page-wrapper">
+    <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+        <div class="page-body">
+        <div class="container-fluid">
+          <div class="page-header">
+            <div class="row">
+              <div class="col">
+                <div class="page-header-left" style="margin-top: -40px">
+                  <h3>Gebze Yönetim</h3>
+                  <ol class="breadcrumb" style="margin-top: 65px; margin-left: -200px">
+                    <li class="breadcrumb-item">
+                      <a href="index.html"><i data-feather="home"></i></a>
+                    </li>
+                    <li class="breadcrumb-item">Gebze</li>
+                    <li class="breadcrumb-item active">
+                      <a href="Gebze - Gebze Yonetim.html">Gebze-Yönetim</a>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <br><br><br>
+
+        <!-- İçeriklerin Yükleneceği Alan -->
+        <div id="icerikler">
+          <table class="table" style="box-shadow: 6px 6px 20px rgba(100, 100, 100, 0.738); background-color: rgba(204, 204, 204, 0.186); border-radius: 10px; border: none;
+            margin-top: -20px;">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 1%;">
+                  
+                </th>
+                <th scope="col" style="width: 20%;">Sayfa Başlığı</th>
+                <th scope="col" style="width: 20%;">Kategori</th>
+                <th scope="col" style="width: 20%;">Durumu</th>
+                <th scope="col" style="width: 20%;">Son Güncelleme</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td scope=" row">Mahalle Muhtarları</td>
+                <td scope="row">
+                  <span class="kategori" style="margin-top: 7px">Gebze Yönetim</span>
+                </td>
+                <td scope="row">
+                  <span class="arşiv" style="margin-top: 7px">
+                    Arşivlendi
+                  </span>
+                </td>
+                <td scope="row">...</td>
+                <td scope="row" style="text-align: right">
+                  <div class="dropdown-container">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                      İşlemler
+                    </button>
+                    <div class="dropdown-menu">
+                      <button onclick="muhtarEdit()">
+                        <img src="../assets/images/dropdown_svg/edit.svg" alt="edit" width="10%" height="10%" />
+                        Düzenle</button>
+                      <button onclick="archive()">
+                        <img src="../assets/images/dropdown_svg/copy-writing.svg" alt="content" width="10%"
+                          height="10%" />
+                        Arşivle
+                      </button>
+
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Kardeş Şehirler</td>
+                <td>
+                  <span class="kategori" style="margin-top: 7px">Gebze Yönetim</span>
+                </td>
+                <td>
+                  <span class="arşiv" style="margin-top: 7px">
+                    Arşivlendi
+                  </span>
+                </td>
+                <td>...</td>
+                <td scope="row" style="text-align: right">
+                  <div class="dropdown-container">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                      İşlemler
+                    </button>
+                    <div class="dropdown-menu">
+                      <button onclick="kardesSehirler()">
+                        <img src="../assets/images/dropdown_svg/edit.svg" alt="edit" width="10%" height="10%" />
+                        Düzenle</button>
+                      <button onclick="archive()">
+                        <img src="../assets/images/dropdown_svg/copy-writing.svg" alt="content" width="10%"
+                          height="10%" />
+                        Arşivle
+                      </button>
+
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Üye Olduğumuz birlikler</td>
+                <td>
+                  <span class="kategori" style="margin-top: 7px">Gebze Yönetim</span>
+                </td>
+                <td>
+                  <span class="arşiv" style="margin-top: 7px">
+                    Arşivlendi
+                  </span>
+                </td>
+                <td>...</td>
+                <td scope="row" style="text-align: right">
+                  <div class="dropdown-container">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                      İşlemler
+                    </button>
+                    <div class="dropdown-menu">
+                      <button onclick="uyelikler()">
+                        <img src="../assets/images/dropdown_svg/edit.svg" alt="edit" width="10%" height="10%" />
+                        Düzenle</button>
+                      <button onclick="archive()">
+                        <img src="../assets/images/dropdown_svg/copy-writing.svg" alt="content" width="10%"
+                          height="10%" />
+                        Arşivle
+                      </button>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer style="height: 200px; opacity: 0"></footer>
+
+      <!-- !!!!!!      SCRIPT KODLARI BURADA     !!!!!      -------------->
+      <script src="../ltr/JavaScript/gebze_yonetim.js"></script>
+      <script>
+        // Burada herhangi bir checkbox seçildiğinde Arşivle ve Sil butonlarının display özelliğini none olmaktan çıkaracağız.
+        const checkboxes = document.querySelectorAll('.checkbox-item');
+        const archiveButton = document.getElementById('archive-button');
+        const deleteButton = document.getElementById('delete-button');
+
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', () => {
+            const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            archiveButton.style.display = isChecked ? 'block' : 'none';
+            deleteButton.style.display = isChecked ? 'block' : 'none';
+          });
+        });
+
+        // Ana checkboxa tıklandığında tüm checkboxların durumunu değiştirme
+        const anaCheckbox = document.getElementById('ana-checkbox');
+        anaCheckbox.addEventListener('change', () => {
+          checkboxes.forEach(checkbox => {
+            checkbox.checked = anaCheckbox.checked;
+            checkbox.dispatchEvent(new Event('change'));
+          });
+        });
+      </script>
+
+      <!-- latest jquery-->
+      <script src="../assets/js/jquery-3.2.1.min.js"></script>
+      <!-- Bootstrap js-->
+      <script src="../assets/js/bootstrap/popper.min.js"></script>
+      <script src="../assets/js/bootstrap/bootstrap.js"></script>
+      <!-- feather icon js-->
+      <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+      <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+      <!-- Sidebar jquery-->
+      <script src="../assets/js/sidebar-menu.js"></script>
+      <script src="../assets/js/config.js"></script>
+      <!-- Plugins JS start-->
+
+      <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+      <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+      <script src="../assets/js/typeahead-search/handlebars.js"></script>
+      <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+      <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+      <!-- Theme js-->
+      <script src="../assets/js/script.js"></script>
+      <!-- Bootstrap JS + Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

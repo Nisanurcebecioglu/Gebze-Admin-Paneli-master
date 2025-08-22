@@ -1,0 +1,3 @@
+- Javascript yapıları TypeScript kodlarına çevrilecek
+- veritabanı bağlantıları yapılacak.
+- Hizmetler sayfasında 

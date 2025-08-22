@@ -1,0 +1,82 @@
+.logo-img {
+  height: 200px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+}
+
+.index-img {
+  height: 70px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+  margin-right: 100px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+  font-size: 16px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td[contenteditable="true"]:focus {
+  outline: 2px solid #007bff;
+  background-color: #e9f5ff;
+}
+
+.edit-button {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #6382e9;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}

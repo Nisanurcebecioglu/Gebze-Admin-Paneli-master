@@ -1,0 +1,88 @@
+.logo-img {
+  height: 200px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+}
+
+.index-img {
+  height: 70px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+  margin-right: 100px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgb(236, 236, 236);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin: 10px 0;
+  color: #000000;
+}
+
+.card input {
+  width: 96%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.degistir-btn {
+  background-color: #7180e1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button.kaydet {
+  background-color: #825aa7;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 7. Kart ortalanmış */
+.full-width {
+  grid-column: span 2;
+  justify-self: center;
+  width: 50%;
+}

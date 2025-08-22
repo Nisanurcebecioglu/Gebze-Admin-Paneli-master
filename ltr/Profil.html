@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images//gebze-belediyesi.ico" type="image/x-icon">
+    <title>Profil - Gebze Belediyesi Admin Paneli</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="Profil/profil.css">
+
+    <!-- Head veya body sonuna -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="loader bg-white">
+            <div class="whirly-loader"> </div>
+        </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+        <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col">
+                                <div class="page-header-left">
+                                    <h3>Profil Düzenle</h3>
+                                    <ol class="breadcrumb" style="margin-top: 85px; margin-left: -205px;">
+                                        <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Profil Düzenle</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <!-- İçeriklerin Yükleneceği Alan -->
+
+                <div class="card-container">
+                    <div class="profile-card">
+
+                        <div class="profile-photo-section">
+                            <input type="file" id="profilePhotoInput" accept="image/*" style="display: none;">
+                            <div class="profile-photo-wrapper" id="profilePhotoWrapper">
+                                <img src="../assets/images/user/user.png" alt="" id="profilePhoto">
+                                <div class="edit-overlay" id="editOverlay">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="fullName">Ad - Soyad</label>
+                            <input type="text" id="fullName" placeholder="Adınızı ve Soyadınızı Girin">
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="email">E-Posta</label>
+                            <div class="input-with-icon">
+                                <input type="email" id="email" placeholder="ornek@mail.com">
+                                <div id="email-icon" class="icon-container">
+                                    <i class="fas fa-times-circle unverified-icon red-icon"
+                                        style="margin-top: -10px;"></i>
+                                    <div class="popup">
+                                        <div class="popup-header">Onaylanmadı!</div>
+                                        <div class="popup-body">
+                                            <button onclick="onayKodPosta()">Onay Kodu Gönder</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="phone">Telefon Numarası</label>
+                            <div class="input-with-icon">
+                                <input type="tel" id="phone" placeholder="5xx xxx xx xx">
+                                <div id="phone-icon" class="icon-container">
+                                    <i class="fas fa-times-circle unverified-icon red-icon"
+                                        style="margin-top: -10px;"></i>
+                                    <div class="popup">
+                                        <div class="popup-header">Onaylanmadı!</div>
+                                        <div class="popup-body">
+                                            <button onclick="onayKodTel()">Onay Kodu Gönder</button>
+                                        </div>
+                                    </div>
+                                    <small id="phone-error" style="color: #dc3545; display: none;"></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="newPassword">Yeni Şifre</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="newPassword" placeholder="Yeni şifrenizi girin">
+                                <i class="fas fa-eye-slash password-toggle-icon" id="toggleNewPassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="confirmNewPassword">Yeni Şifre Tekrar</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="confirmNewPassword"
+                                    placeholder="Yeni şifrenizi tekrar girin">
+                                <i class="fas fa-eye-slash password-toggle-icon" id="toggleConfirmNewPassword"></i>
+
+                            </div>
+                        </div>
+
+                        <button class="save-button" onclick="validatePasswords()">Kaydet</button>
+                    </div>
+                </div>
+
+
+                <!-- latest jquery-->
+                <script src="../assets/js/jquery-3.2.1.min.js"></script>
+                <!-- Bootstrap js-->
+                <script src="../assets/js/bootstrap/popper.min.js"></script>
+                <script src="../assets/js/bootstrap/bootstrap.js"></script>
+                <!-- feather icon js-->
+                <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+                <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+                <!-- Sidebar jquery-->
+                <script src="../assets/js/sidebar-menu.js"></script>
+                <script src="../assets/js/config.js"></script>
+                <!-- Plugins JS start-->
+                <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+                <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+                <script src="../assets/js/typeahead-search/handlebars.js"></script>
+                <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+                <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+                <!-- Theme js-->
+                <script src="../assets/js/script.js"></script>
+                <!-- Bootstrap JS + Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Proje Kodları -->
+                <script src="Profil/profil.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+.DHNDüzenle {
+  margin-left: 10px;
+  margin-right: 200px;
+  margin-top: 15px;
+  width: 97.5%;
+}
+
+.select {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  font-size: 16px;
+}
+
+.btn-sil:focus,
+.btn-sil:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.btn-uygula:focus,
+.btn-uygula:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.DHNbuton:focus,
+.DHNbuton:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.amirlik {
+  background-color: rgba(160, 40, 0, 0.584);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 80px;
+  margin-bottom: 10px;
+}
+
+.eğitim2 {
+  background-color: rgba(160, 40, 0, 0.584);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.Kültürel2 {
+  background-color: rgba(160, 40, 0, 0.584);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.sosyal2 {
+  background-color: rgba(160, 40, 0, 0.584);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.diger2 {
+  background-color: rgba(160, 40, 0, 0.584);
+  color: white;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.ikincilButon {
+  border-radius: 5px;
+  background-color: rgba(70, 244, 70, 0.455);
+  border: none;
+}
+
+.ikincilButon:focus,
+.ikincilButon:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.ekle-butonu,
+.arsivle-butonu,
+.sil-butonu {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.DHNbuton {
+  border-radius: 7px;
+}
+
+.editButton {
+  background-color: rgba(51, 89, 171, 0.405);
+  border: none;
+  border-radius: 7px;
+  width: 80px;
+  height: 30px;
+}
+
+.editButton:focus,
+.editButton:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+table {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+table tr:hover {
+  background-color: #cccccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table tr button {
+  transition: transform 0.3s ease !important;
+  transform: translate(0%, 0%);
+}
+
+table tr button:hover {
+  transition: transform 0.3s ease !important;
+  transform: scale(1.2);
+}
+
+.table-button {
+  background-color: rgba(0, 81, 255, 0.738);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease !important;
+}
+
+.table-button:hover {
+  background-color: rgba(0, 0, 0, 0.948);
+}
+
+.logo-img {
+  height: 200px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+}
+
+.index-img {
+  height: 70px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+  margin-right: 100px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: rgba(5, 224, 60, 0.488);
+  color: rgba(9, 161, 6, 0.766);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.36s ease !important;
+  width: 100px;
+  height: 40px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #2d2525;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(236, 225, 225, 0.15);
+  z-index: 999;
+  min-width: 140px;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-title {
+  font-weight: bold;
+  padding: 10px 12px 5px;
+  font-size: 13px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgba(5, 224, 60, 0.705);
+  color: white;
+}
+
+/* * {
+              outline: none !important;
+              box-shadow: none !important;
+            }*/
+#kategoriButonlari {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+#kategoriButonlari button {
+  padding: 10px 10px;
+
+  cursor: pointer;
+
+  text-align: center;
+  font-weight: bold;
+  min-width: auto;
+  /* Yazı kadar genişlik */
+  flex: none;
+  /* Genişlik zorlamasını kaldırır */
+  background-color: #67baea71;
+}
+
+#kategoriButonlari button:focus {
+  transition: transform 0.5s ease !important;
+  transform: scale(1.07);
+}
+
+#kategoriButonlari button:focus,
+#kategoriButonlari button:active {
+  outline: none;
+  border: none;
+  /* İstersen bunu da kaldırabilirsin */
+  box-shadow: none;
+  /* Tarayıcı gölgesini de kaldırır */
+}
+
+.btn-sil:hover {
+  transition: transform 0.5s ease !important;
+  transform: scale(1.07);
+}
+
+.btn-uygula:hover {
+  transition: transform 0.5s ease !important;
+  transform: scale(1.07);
+}
+
+.btn-sil:focus {
+  transition: transform 0.5s ease !important;
+  transform: scale(1.07);
+  box-shadow: 3px 5px 6px rgba(231, 7, 7, 0.793) !important;
+}
+
+.btn-uygula:focus {
+  transition: transform 0.5s ease !important;
+  transform: scale(1.07) !important;
+  box-shadow: 3px 5px 6px rgba(3, 153, 167, 0.793) !important;
+}
+
+td > a > svg {
+  fill: black !important;
+}
+
+#icerikTablosu {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#icerikTablosu td,
+#icerikTablosu th {
+  border: none;
+  /* tüm varsayılan kenarlıkları kaldır */
+  padding: 10px;
+}
+
+#icerikTablosu tbody tr {
+  border-bottom: 1px solid #ccc;
+  /* sadece satır altına çizgi */
+}
+
+#icerikTablosu thead {
+  border-bottom: 2px solid #aaa;
+  /* istersen başlığa kalın çizgi */
+}
+
+#kategoriButonlari button {
+  transition: all 0.5;
+}
+
+#kategoriButonlari button.active {
+  border: 2px solid #ffffff;
+  transform: scale(1.05);
+  background-color: #255f8552;
+}
+
+#kategoriButonlari button.active {
+  background-color: #366e925c;
+
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}

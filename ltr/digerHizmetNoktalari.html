@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+    <meta name="author" content="pixelstrap" />
+    <link
+      rel="icon"
+      href="../assets/images/gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images//gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <title>Kurumsal - Yönetim</title>
+    <!-- Google font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/fontawesome.css"
+    />
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css" />
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css" />
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css" />
+    <!-- Feather icon-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/feather-icon.css"
+    />
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css" />
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link
+      id="color"
+      rel="stylesheet"
+      href="../assets/css/light-1.css"
+      media="screen"
+    />
+    <!-- Responsive css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/responsive.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="CSS/diğerHizmetNoktalari.css"
+    />
+  </head>
+
+  <body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader bg-white">
+        <div class="whirly-loader"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+      <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper">
+        <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-header">
+              <div class="row">
+                <div class="col" style="height: 50px">
+                  <div class="page-header-left">
+                    <h3 style="margin-bottom: 150px">
+                      Diğer Hizmet Noktalarımız
+                    </h3>
+
+                    <ol
+                      class="breadcrumb"
+                      style="margin-left: -357px; margin-bottom: 70px"
+                    >
+                      <li class="breadcrumb-item">
+                        <a href="index.html"><i data-feather="home"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="İletisim.html"> İletisim </a>
+                      </li>
+                      <li class="breadcrumb-item active">
+                        Diğer Hizmet Noktalarımız
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benim yaptığım navbar kısmı -->
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid d-flex justify-content-end"></div>
+            <style>
+              .buton {
+                height: 36px;
+                border-radius: 12px;
+                border: none;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                padding: 0 16px;
+                width: auto;
+                /* Genişlik içeriğe göre */
+                margin-right: 8px;
+                color: white;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                user-select: none;
+              }
+
+              .buton:hover {
+                transform: scale(1.1);
+                filter: brightness(85%);
+              }
+
+              .icon {
+                width: 16px;
+                height: 16px;
+                position: relative;
+                flex-shrink: 0;
+                margin-right: 8px;
+              }
+
+              /* EKLE (artı) */
+              .arti::before,
+              .arti::after {
+                content: "";
+                position: absolute;
+                background-color: white;
+                border-radius: 1px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+
+              .arti::before {
+                width: 2px;
+                height: 14px;
+              }
+
+              .arti::after {
+                width: 14px;
+                height: 2px;
+              }
+
+              /* ARŞİVLE (kutu) */
+              .kutu::before,
+              .kutu::after {
+                content: "";
+                position: absolute;
+                background-color: white;
+                border-radius: 1px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+
+              .kutu::before {
+                width: 14px;
+                height: 4px;
+                top: 4px;
+              }
+
+              .kutu::after {
+                width: 14px;
+                height: 8px;
+                top: 9px;
+              }
+
+              /* SİL SVG path renk beyaz */
+              .sil-butonu svg path {
+                fill: white;
+              }
+
+              /* Renkler */
+              .ekle-butonu {
+                background-color: #4caf4fa0;
+              }
+
+              .arsivle-butonu {
+                background-color: #2195f395;
+              }
+
+              .sil-butonu {
+                background-color: #f44336a8;
+              }
+            </style>
+
+            <!-- EKLE -->
+            <button class="buton ekle-butonu">
+              <div class="icon arti"></div>
+              <span>Ekle</span>
+            </button>
+
+            <!-- SİL -->
+            <button class="buton sil-butonu" onclick="sil()">
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M3 6h18v2H3V6zm2 3h14l-1.5 12.5a1 1 0 01-1 .5H8a1 1 0 01-1-.5L5 9zm4 2v7h2v-7H9zm4 0v7h2v-7h-2z"
+                />
+              </svg>
+              <span>Sil</span>
+            </button>
+          </nav>
+
+          <!-- İçeriklerin Yükleneceği Alan -->
+          <div id="icerikler" style="margin-top: 5px">
+            <div
+              class="dropdown-container"
+              style="margin-bottom: 20px; position: relative"
+            >
+              <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                Filtrele
+              </button>
+              <div class="dropdown-menu">
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox-item"
+                    data-kategori="amirlikler"
+                  />
+                  Amirlikler</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox-item"
+                    data-kategori="kültürel"
+                  />
+                  Kültür ve Sanat Merkezleri</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox-item"
+                    data-kategori="sosyal"
+                  />
+                  Sosyal Tesisler</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox-item"
+                    data-kategori="eğitim"
+                  />
+                  Eğitim</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox-item"
+                    data-kategori="diğer"
+                  />
+                  Diğer</label
+                ><br />
+
+                <div
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-top: 10px;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      gap: 16px;
+                      margin-top: 10px;
+                      padding: 0 10px;
+                    "
+                  >
+                    <button
+                      class="btn-sil"
+                      style="
+                        border: none;
+                        width: 80px;
+                        height: 40px;
+                        background-color: rgba(251, 47, 1, 0.684);
+                        color: rgba(205, 5, 5, 0.9);
+                        font-weight: bold;
+                        border-radius: 5px;
+                      "
+                    >
+                      Temizle
+                    </button>
+                    <button
+                      class="btn-uygula"
+                      style="
+                        border: none;
+                        width: 80px;
+                        height: 40px;
+                        background-color: rgba(1, 213, 251, 0.54);
+                        color: rgb(49, 132, 177);
+                        font-weight: bold;
+                        border-radius: 5px;
+                        padding-left: 16px;
+                      "
+                    >
+                      Uygula
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table
+              id="icerikTablosu"
+              cellpadding="8"
+              cellspacing="0"
+              style="
+                width: 100%;
+                border-collapse: collapse;
+
+                background-color: rgba(204, 204, 204, 0.186);
+                border-radius: 10px;
+              "
+            >
+              <thead>
+                <tr>
+                  <th scope="col" colspan="1">
+                    <input type="checkbox" id="ana-checkbox" />
+                  </th>
+                  <th scope="col" colspan="1">Konum</th>
+                  <th scope="col" colspan="3">İsim</th>
+                  <th
+                    scope="col"
+                    colspan="4"
+                    style="text-align: left; padding-right: 100px"
+                  >
+                    Kategori
+                  </th>
+
+                  <th scope="col" colspan="3"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="amirlikler">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Gebze+K%C3%BClt%C3%BCr+Merkezi/@40.7975725,29.4297499,280m/data=!3m1!1e3!4m6!3m5!1s0x14cb2088792c7b75:0x6f17b50e45cc6c97!8m2!3d40.7982109!4d29.43007!16s%2Fg%2F11cltwggz7?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Çarşı ve Seyyar Zabıta Amirliği</td>
+                  <td
+                    colspan="4"
+                    style="text-align: right; margin-left: auto"
+                    class="amirlik"
+                  >
+                    Amirlikler
+                  </td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Gebze+K%C3%BClt%C3%BCr+Merkezi/@40.7975725,29.4297499,333m/data=!3m1!1e3!4m6!3m5!1s0x14cb2088792c7b75:0x6f17b50e45cc6c97!8m2!3d40.7982109!4d29.43007!16s%2Fg%2F11cltwggz7?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D', 'Çarşı ve Seyyar Zabıta Amirliği', 'Amirlikler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="amirlikler">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Zab%C4%B1ta+M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC+%C3%87ocuk+Trafik+E%C4%9Fitim+Okulu/@40.8049925,29.4428919,18.75z/data=!4m5!3m4!1s0x14cb20ec9006cb7d:0xd6ffdfe862f20282!8m2!3d40.804962!4d29.4434921?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Trafik ve Eğitim Okulu Zabıta Amirliği</td>
+                  <td colspan="4" class="amirlik">Amirlikler</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Zab%C4%B1ta+M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC+%C3%87ocuk+Trafik+E%C4%9Fitim+Okulu/@40.8049925,29.4428919,333m/data=!3m1!1e3!4m6!3m5!1s0x14cb20ec9006cb7d:0xd6ffdfe862f20282!8m2!3d40.804962!4d29.4434921!16s%2Fg%2F1t_rytcp?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D' , 'Trafik ve Eğitim Okulu Zabıta Amirliği' , 'Amirlikler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="amirlikler">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px" colspan="1">
+                    <a
+                      href="https://www.google.com/maps/place/Gebze+Terminali/@40.7948829,29.4573284,17z/data=!4m5!3m4!1s0x14cb20fac8ab9801:0x266fc5bbb55d7ee8!8m2!3d40.7948972!4d29.4595045?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Terminal Zabıta Amirliği.</td>
+                  <td colspan="4" class="amirlik">Amirlikler</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Gebze+Terminali/@40.7948829,29.4573284,667m/data=!3m1!1e3!4m6!3m5!1s0x14cb20fac8ab9801:0x266fc5bbb55d7ee8!8m2!3d40.7948789!4d29.4595171!16s%2Fg%2F1ptz5924m?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D', 'Terminal Zabıta Amirliği.', 'Amirlikler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="amirlikler">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/@40.8859666,29.4927502,3a,75y,142.31h,77.41t/data=!3m7!1e1!3m5!1s-9qle0WHXRI0irrRBfUwbw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D12.589068767916302%26panoid%3D-9qle0WHXRI0irrRBfUwbw%26yaw%3D142.31097865574856!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Mollafenari Zabıta Amirliği</td>
+                  <td colspan="4" class="amirlik">Amirlikler</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/@40.8859666,29.4927502,3a,75y,142.31h,77.41t/data=!3m7!1e1!3m5!1s-9qle0WHXRI0irrRBfUwbw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D12.589068767916302%26panoid%3D-9qle0WHXRI0irrRBfUwbw%26yaw%3D142.31097865574856!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Mollafenari Zabıta Amirliği', 'Amirlikler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="amirlikler">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Bar%C4%B1%C5%9F,+Marmara+Nakliyeciler+Terminali,+41400+Gebze%2FKocaeli/@40.7977461,29.4684176,18z/data=!3m1!4b1!4m5!3m4!1s0x14cb211c04c111a9:0x6170e99e4c4123de!8m2!3d40.7975598!4d29.4694361?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Kamyon ve Tır garajı Zabıta Amirliği</td>
+                  <td colspan="4" class="amirlik">Amirlikler</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Bar%C4%B1%C5%9F,+Marmara+Nakliyeciler+Terminali,+41400+Gebze%2FKocaeli/@40.7977461,29.4684176,18z/data=!3m1!4b1!4m5!3m4!1s0x14cb211c04c111a9:0x6170e99e4c4123de!8m2!3d40.7975598!4d29.4694361?shorturl=1', 'Kamyon ve Tır garajı Zabıta Amirliği', 'Amirlikler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="amirlikler">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Beylikba%C4%9F%C4%B1+Bilim+ve+Sanat+Merkezi/@40.8060524,29.3815603,17z/data=!4m5!3m4!1s0x14cadfa7d2168009:0x9d4de4e27aefbc48!8m2!3d40.8060359!4d29.3837509?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Beylikbağı Karakolu</td>
+                  <td colspan="4" class="amirlik">Amirlikler</td>
+                  <td colspan="4" style="text-align: right">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Beylikba%C4%9F%C4%B1+Bilim+ve+Sanat+Merkezi/@40.8060524,29.3815603,17z/data=!4m5!3m4!1s0x14cadfa7d2168009:0x9d4de4e27aefbc48!8m2!3d40.8060359!4d29.3837509?shorturl=1', 'Beylikbağı Karakolu', 'Amirlikler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="kültürel">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Beylikba%C4%9F%C4%B1+Bilim+ve+Sanat+Merkezi/@40.8060524,29.3815603,666m/data=!3m1!1e3!4m6!3m5!1s0x14cadfa7d2168009:0x9d4de4e27aefbc48!8m2!3d40.8060484!4d29.383749!16s%2Fg%2F11dfj9z7ym?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Beylikbağı Bilim ve Sanat Merkezi</td>
+                  <td colspan="4" class="Kültürel2">Kültür ve Sanat Merkezi</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Beylikba%C4%9F%C4%B1+Bilim+ve+Sanat+Merkezi/@40.8060524,29.3815603,666m/data=!3m1!1e3!4m6!3m5!1s0x14cadfa7d2168009:0x9d4de4e27aefbc48!8m2!3d40.8060484!4d29.383749!16s%2Fg%2F11dfj9z7ym?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Beylikbağı Bilim ve Sanat Merkezi', 'Kültür ve Sanat Merkezi') "
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="kültürel">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Arap%C3%A7e%C5%9Fme+Bilim+ve+Sanat+Merkezi/@40.8067487,29.4481723,5331m/data=!3m1!1e3!4m6!3m5!1s0x14cb218c872ba7cb:0xd9ac3808d8983b27!8m2!3d40.8089439!4d29.449991!16s%2Fg%2F11fml0x0fr?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Arapçeşme Bilim ve Sanat Merkezi</td>
+                  <td colspan="4" class="Kültürel2">Kültür ve Sanat Merkezi</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Arap%C3%A7e%C5%9Fme+Bilim+ve+Sanat+Merkezi/@40.8067487,29.4481723,5331m/data=!3m1!1e3!4m6!3m5!1s0x14cb218c872ba7cb:0xd9ac3808d8983b27!8m2!3d40.8089439!4d29.449991!16s%2Fg%2F11fml0x0fr?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Arapçeşme Bilim ve Sanat Merkezi', 'Kültür ve Sanat Merkezi')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="kültürel">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Gebze+Belediyesi+Bilim+ve+Sanat+Merkezi/@40.784984,29.410849,15z/data=!4m5!3m4!1s0x0:0x8e61b03f09c2b2c2!8m2!3d40.7849677!4d29.4108391?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">İstasyon Bilim ve Sanat Merkezi</td>
+                  <td colspan="4" class="Kültürel2">Kültür Ve Sanat Merkezi</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Gebze+Belediyesi+Bilim+ve+Sanat+Merkezi/@40.784984,29.410849,15z/data=!4m5!3m4!1s0x0:0x8e61b03f09c2b2c2!8m2!3d40.7849677!4d29.4108391?shorturl=1', 'İstasyon Bilim ve Sanat Merkezi', 'Kültür Ve Sanat Merkezi')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="sosyal">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/G%C3%BCzide+Kent+Meydan%C4%B1/@40.7984529,29.4301886,19.71z/data=!4m5!3m4!1s0x14cb21831ca8cb55:0x6766574bbca84e13!8m2!3d40.7985678!4d29.4300335?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Güzide Kent Meydanı</td>
+                  <td colspan="4" class="sosyal2">Sosyal Tesisler</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/G%C3%BCzide+Kent+Meydan%C4%B1/@40.7984529,29.4301886,19.71z/data=!4m5!3m4!1s0x14cb21831ca8cb55:0x6766574bbca84e13!8m2!3d40.7985678!4d29.4300335?shorturl=1', 'Güzide Kent Meydanı', 'Sosyal Tesisler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="sosyal">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Hac%C4%B1halil,+Atat%C3%BCrk+Cd.+No:10%2F9,+41400+Gebze%2FKocaeli/@40.7978426,29.4316413,19.96z/data=!4m5!3m4!1s0x14cb2088e5fe3467:0x9b3576f802414c40!8m2!3d40.797941!4d29.431729?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Güzide Cumhuriyet Meydanı</td>
+                  <td colspan="4" class="sosyal2">Sosyal Tesisler</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Hac%C4%B1halil,+Atat%C3%BCrk+Cd.+No:10%2F9,+41400+Gebze%2FKocaeli/@40.7978426,29.4316413,19.96z/data=!4m5!3m4!1s0x14cb2088e5fe3467:0x9b3576f802414c40!8m2!3d40.797941!4d29.431729?shorturl=1', 'Güzide Cumhuriyet Meydanı', 'Sosyal Tesisler')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Gebze+Belediyesi+Atl%C4%B1+E%C4%9Fitim+Merkezi/@40.8215662,29.4263812,15z/data=!4m5!3m4!1s0x0:0xc02b5ca41c3cfd37!8m2!3d40.8215662!4d29.4263812?sa=X&ved=2ahUKEwjTna_9st3zAhVOQEEAHfeTC0AQ_BJ6BAg1EAU&shorturl=1i"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Atlı Eğitim Merkezi</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Gebze+Belediyesi+Atl%C4%B1+E%C4%9Fitim+Merkezi/@40.8215662,29.4263812,15z/data=!4m5!3m4!1s0x0:0xc02b5ca41c3cfd37!8m2!3d40.8215662!4d29.4263812?sa=X&ved=2ahUKEwjTna_9st3zAhVOQEEAHfeTC0AQ_BJ6BAg1EAU&shorturl=1i', 'Atlı Eğitim Merkezi', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Cumhuriyet,+Yeni+Ba%C4%9Fdat+Cd.+No:119,+41400+Gebze%2FKocaeli/@40.808397,29.3767127,18z/data=!3m1!4b1!4m5!3m4!1s0x14cadfa98c371e2f:0x21939a9f1a7d9e94!8m2!3d40.808397!4d29.377807?shorturl=1&shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Cumhuriyet Spor Salonu</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Cumhuriyet,+Yeni+Ba%C4%9Fdat+Cd.+No:119,+41400+Gebze%2FKocaeli/@40.808397,29.3767127,18z/data=!3m1!4b1!4m5!3m4!1s0x14cadfa98c371e2f:0x21939a9f1a7d9e94!8m2!3d40.808397!4d29.377807?shorturl=1&shorturl=1', 'Cumhuriyet Spor Salonu', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Mustafapa%C5%9Fa,+712%2F2.+Sk.+No:2,+41400+Gebze%2FKocaeli/@40.802388,29.427409,861m/data=!3m1!1e3!4m6!3m5!1s0x14cb2085a55b34a1:0xfb2fb8bc3b387035!8m2!3d40.802388!4d29.427409!16s%2Fg%2F11c2927bq_?ll=40.802388,29.427409&z=17&t=m&gl=TR&mapclient=embed&q=712/2.+Sk.+No:2+Mustafapa%C5%9Fa+41400+Gebze/Kocaeli&entry=tts&g_ep=EgoyMDI0MTIxMS4wIPu8ASoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Enderun Çocuk Atölyeleri</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Mustafapa%C5%9Fa,+712%2F2.+Sk.+No:2,+41400+Gebze%2FKocaeli/@40.802388,29.427409,861m/data=!3m1!1e3!4m6!3m5!1s0x14cb2085a55b34a1:0xfb2fb8bc3b387035!8m2!3d40.802388!4d29.427409!16s%2Fg%2F11c2927bq_?ll=40.802388,29.427409&z=17&t=m&gl=TR&mapclient=embed&q=712/2.+Sk.+No:2+Mustafapa%C5%9Fa+41400+Gebze/Kocaeli&entry=tts&g_ep=EgoyMDI0MTIxMS4wIPu8ASoASAFQAw%3D%3D', 'Enderun Çocuk Atölyeleri', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Adem+Yavuz,+2322.+Sk.+No:1,+41400+Gebze+Organize+Sanayi+B%C3%B6lgesi+3%2FGebze%2FKocaeli/@40.8208522,29.3795559,17z/data=!3m1!4b1!4m5!3m4!1s0x14cadf1a67dde405:0x43e69a4f5778c6c3!8m2!3d40.8208522!4d29.3817446?sa=X&ved=2ahUKEwjunYChuN3zAhXFolwKHcgZC_kQ8gF6BAgSEAE&shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Gesmek Adem Yavuz Mahalle Kursu</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Adem+Yavuz,+2322.+Sk.+No:1,+41400+Gebze+Organize+Sanayi+B%C3%B6lgesi+3%2FGebze%2FKocaeli/@40.8208522,29.3795559,17z/data=!3m1!4b1!4m5!3m4!1s0x14cadf1a67dde405:0x43e69a4f5778c6c3!8m2!3d40.8208522!4d29.3817446?sa=X&ved=2ahUKEwjunYChuN3zAhXFolwKHcgZC_kQ8gF6BAgSEAE&shorturl=1', 'Gesmek Adem Yavuz Mahalle Kursu', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="http://google.com/maps/place/E%C5%9Fref+Bitlis+Park%C4%B1/@40.8146785,29.430259,666m/data=!3m1!1e3!4m6!3m5!1s0x14cb20bd7e654599:0xd167f603137cb32c!8m2!3d40.8146745!4d29.4324477!16s%2Fg%2F11b7q5vhhm?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Gesmek Gaziler Mahalle Kursu</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('http://google.com/maps/place/E%C5%9Fref+Bitlis+Park%C4%B1/@40.8146785,29.430259,666m/data=!3m1!1e3!4m6!3m5!1s0x14cb20bd7e654599:0xd167f603137cb32c!8m2!3d40.8146745!4d29.4324477!16s%2Fg%2F11b7q5vhhm?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Gesmek Gaziler Mahalle Kursu', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/GESMEK+-+Gebze+Belediyesi+G%C3%BCzel+Sanatlar+ve+Meslek+E%C4%9Fitimi+Kurslar%C4%B1/@40.799833,29.433036,15z/data=!4m5!3m4!1s0x0:0x51d3b10ec2b5859a!8m2!3d40.7997616!4d29.4329884?sa=X&ved=2ahUKEwiAwO_Xst3zAhVVQkEAHY0HDhEQ_BJ6BAg8EAU&shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Gesmek Merkez</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/GESMEK+-+Gebze+Belediyesi+G%C3%BCzel+Sanatlar+ve+Meslek+E%C4%9Fitimi+Kurslar%C4%B1/@40.799833,29.433036,15z/data=!4m5!3m4!1s0x0:0x51d3b10ec2b5859a!8m2!3d40.7997616!4d29.4329884?sa=X&ved=2ahUKEwiAwO_Xst3zAhVVQkEAHY0HDhEQ_BJ6BAg8EAU&shorturl=1', 'Gesmek Merkez', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="eğitim">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Nur+Said+K%C4%B1rtasiye+%26+Tuhafiye+-+Oyuncak/@40.8202494,29.4199115,42m/data=!3m1!1e3!4m6!3m5!1s0x14cb214deef111e9:0xa579d0fe426252a4!8m2!3d40.8202866!4d29.4198995!16s%2Fg%2F11h_48jdfj?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Gesmek Yenikent Mahalle Kursu</td>
+                  <td colspan="4" class="eğitim2">Eğitim</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Nur+Said+K%C4%B1rtasiye+%26+Tuhafiye+-+Oyuncak/@40.8202494,29.4199115,42m/data=!3m1!1e3!4m6!3m5!1s0x14cb214deef111e9:0xa579d0fe426252a4!8m2!3d40.8202866!4d29.4198995!16s%2Fg%2F11h_48jdfj?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Gesmek Yenikent Mahalle Kursu', 'Eğitim')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Adem+Yavuz+Mahallesi+Mezarl%C4%B1%C4%9F%C4%B1/@40.819014,29.3758483,17z/data=!4m5!3m4!1s0x14cadf1b3b7189df:0x101d3a1916754cae!8m2!3d40.8193977!4d29.3794426?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+                  <td colspan="3">Adem Yavuz Mezarlığı</td>
+                  <td colspan="4" class="diger2" style="margin-left: auto">
+                    Diğer
+                  </td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Adem+Yavuz+Mahallesi+Mezarl%C4%B1%C4%9F%C4%B1/@40.819014,29.3758483,17z/data=!4m5!3m4!1s0x14cadf1b3b7189df:0x101d3a1916754cae!8m2!3d40.8193977!4d29.3794426?shorturl=1', 'Adem Yavuz Mezarlığı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Gebze+Merkez+Mezarl%C4%B1%C4%9F%C4%B1+ve+%C5%9Eehitli%C4%9Fi/@40.8156572,29.4115268,2665m/data=!3m1!1e3!4m6!3m5!1s0x14cadf6144297b57:0xedcf6db761ed2ca8!8m2!3d40.8147379!4d29.4130591!16s%2Fg%2F11dzdw421p?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Gebze Merkez Mezarlığı ve Şehitliği</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Gebze+Merkez+Mezarl%C4%B1%C4%9F%C4%B1+ve+%C5%9Eehitli%C4%9Fi/@40.8156572,29.4115268,2665m/data=!3m1!1e3!4m6!3m5!1s0x14cadf6144297b57:0xedcf6db761ed2ca8!8m2!3d40.8147379!4d29.4130591!16s%2Fg%2F11dzdw421p?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Gebze Merkez Mezarlığı ve Şehitliği', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Mimar+Sinan+Mahallesi+Mezarl%C4%B1%C4%9F%C4%B1/@40.8110423,29.384629,18z/data=!4m5!3m4!1s0x14cadf08e659f719:0xab1fc40bbd0f861c!8m2!3d40.8109238!4d29.3854621?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Mimar Sinan Mezarlığı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Mimar+Sinan+Mahallesi+Mezarl%C4%B1%C4%9F%C4%B1/@40.8110423,29.384629,18z/data=!4m5!3m4!1s0x14cadf08e659f719:0xab1fc40bbd0f861c!8m2!3d40.8109238!4d29.3854621?shorturl=1', 'Mimar Sinan Mezarlığı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Pelitli,+Yeni+Mezarl%C4%B1k+Yolu+No:107,+41400+Gebze%2FKocaeli/@40.8379003,29.4651812,16.75z/data=!4m5!3m4!1s0x14cb26dfa7cf1b15:0xac0c247f4b8e0588!8m2!3d40.8386452!4d29.4664408?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Pelitli Mezarlığı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Pelitli,+Yeni+Mezarl%C4%B1k+Yolu+No:107,+41400+Gebze%2FKocaeli/@40.8379003,29.4651812,16.75z/data=!4m5!3m4!1s0x14cb26dfa7cf1b15:0xac0c247f4b8e0588!8m2!3d40.8386452!4d29.4664408?shorturl=1', 'Pelitli Mezarlığı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Osman+Y%C4%B1lmaz,+611.+Sk.+No:16,+41400+Gebze%2FKocaeli/@40.792897,29.4198293,17z/data=!4m5!3m4!1s0x14cb207ecb3fe14b:0x821e73eeae9ce77!8m2!3d40.792897!4d29.422018?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Osman Yılmaz Mezarlığı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Osman+Y%C4%B1lmaz,+611.+Sk.+No:16,+41400+Gebze%2FKocaeli/@40.792897,29.4198293,17z/data=!4m5!3m4!1s0x14cb207ecb3fe14b:0x821e73eeae9ce77!8m2!3d40.792897!4d29.422018?shorturl=1', 'Osman Yılmaz Mezarlığı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Elden+Ele+G%C3%B6n%C3%BCl+%C3%87ar%C5%9F%C4%B1s%C4%B1/@40.7988478,29.429805,2666m/data=!3m1!1e3!4m6!3m5!1s0x14cb2124c099f945:0xfb811f41d638ef78!8m2!3d40.7988478!4d29.429805!16s%2Fg%2F11n0pcw6zn?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Elden Ele Gönül Çarşısı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Elden+Ele+G%C3%B6n%C3%BCl+%C3%87ar%C5%9F%C4%B1s%C4%B1/@40.7988478,29.429805,2666m/data=!3m1!1e3!4m6!3m5!1s0x14cb2124c099f945:0xfb811f41d638ef78!8m2!3d40.7988478!4d29.429805!16s%2Fg%2F11n0pcw6zn?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Elden Ele Gönül Çarşısı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Gebze+Terminali/@40.7948829,29.4573284,667m/data=!3m1!1e3!4m6!3m5!1s0x14cb20fac8ab9801:0x266fc5bbb55d7ee8!8m2!3d40.7948789!4d29.4595171!16s%2Fg%2F1ptz5924m?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+      c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Gebze Terminal</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Gebze+Terminali/@40.7948829,29.4573284,667m/data=!3m1!1e3!4m6!3m5!1s0x14cb20fac8ab9801:0x266fc5bbb55d7ee8!8m2!3d40.7948789!4d29.4595171!16s%2Fg%2F1ptz5924m?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Gebze Terminal', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Bar%C4%B1%C5%9F,+Marmara+Nakliyeciler+Terminali,+41400+Gebze%2FKocaeli/@40.7977461,29.4684176,18z/data=!3m1!4b1!4m5!3m4!1s0x14cb211c04c111a9:0x6170e99e4c4123de!8m2!3d40.7975598!4d29.4694361?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+                          c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Kamyon ve Tır Parkı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Bar%C4%B1%C5%9F,+Marmara+Nakliyeciler+Terminali,+41400+Gebze%2FKocaeli/@40.7977461,29.4684176,18z/data=!3m1!4b1!4m5!3m4!1s0x14cb211c04c111a9:0x6170e99e4c4123de!8m2!3d40.7975598!4d29.4694361?shorturl=1', 'Kamyon ve Tır Parkı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Mevlana+Kapal%C4%B1+Pazar+Yeri/@40.8122851,29.4193005,17.75z/data=!4m5!3m4!1s0x14cb214b36d25719:0x23db983d4dff738b!8m2!3d40.8120141!4d29.4188972?shorturl=1"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+                          c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Mevlana Kapalı Pazar Alanı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Mevlana+Kapal%C4%B1+Pazar+Yeri/@40.8122851,29.4193005,17.75z/data=!4m5!3m4!1s0x14cb214b36d25719:0x23db983d4dff738b!8m2!3d40.8120141!4d29.4188972?shorturl=1', 'Mevlana Kapalı Pazar Alanı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Pelitli,+Yeni+Mezarl%C4%B1k+Yolu+no:49,+41400+Gebze%2FKocaeli/@40.8413136,29.478129,5329m/data=!3m1!1e3!4m6!3m5!1s0x14cb26fcdbcadd9b:0xc9a68e98eff20ce9!8m2!3d40.8503446!4d29.4677041!16s%2Fg%2F11rcwln59g?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="black"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+                          c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">
+                    Sokak Hayvanları Tedavi, Rehabilitasyon ve Eğitim Merkezi
+                  </td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Pelitli,+Yeni+Mezarl%C4%B1k+Yolu+no:49,+41400+Gebze%2FKocaeli/@40.8413136,29.478129,5329m/data=!3m1!1e3!4m6!3m5!1s0x14cb26fcdbcadd9b:0xc9a68e98eff20ce9!8m2!3d40.8503446!4d29.4677041!16s%2Fg%2F11rcwln59g?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Sokak Hayvanları Tedavi, Rehabilitasyon ve Eğitim Merkezi', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+                <tr class="diğer">
+                  <td scope="col" colspan="1">
+                    <input type="checkbox" class="checkbox-item" />
+                  </td>
+                  <td style="text-align: center; width: 40px">
+                    <a
+                      href="https://www.google.com/maps/place/Tatl%C4%B1kuyu+Kapal%C4%B1+Pazar+Yeri/@40.7901573,29.442148,343m/data=!3m1!1e3!4m6!3m5!1s0x14cb205fbbe2d5d7:0xc616ba8ce58cb649!8m2!3d40.790162!4d29.44326!16s%2Fg%2F11g8b65wl1?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5
+                          c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+                        />
+                      </svg>
+                    </a>
+                  </td>
+
+                  <td colspan="3">Tatlıkuyu Pazar Alanı</td>
+                  <td colspan="4" class="diger2">Diğer</td>
+                  <td style="text-align: right" colspan="4">
+                    <button
+                      class="editButton"
+                      onclick="hizmetNoktalari('https://www.google.com/maps/place/Tatl%C4%B1kuyu+Kapal%C4%B1+Pazar+Yeri/@40.7901573,29.442148,343m/data=!3m1!1e3!4m6!3m5!1s0x14cb205fbbe2d5d7:0xc616ba8ce58cb649!8m2!3d40.790162!4d29.44326!16s%2Fg%2F11g8b65wl1?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D', 'Tatlıkuyu Pazar Alanı', 'Diğer')"
+                    >
+                      Düzenle
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <footer style="height: 200px; opacity: 0"></footer>
+        </div>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap/popper.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.js"></script>
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+
+    <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+    <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+    <script src="../assets/js/typeahead-search/handlebars.js"></script>
+    <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+    <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../assets/js/theme-customizer/customizer.js"></script> -->
+    <!-- Plugin used-->
+
+    <script src="../ltr/JavaScript/digerHizmetNoktalari.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
