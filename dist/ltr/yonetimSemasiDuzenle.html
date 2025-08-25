@@ -1,0 +1,2626 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <style>
+      .logo-img {
+        height: 200px !important;
+        /* Boyutu küçültür */
+        object-fit: contain;
+        display: block;
+      }
+
+      .index-img {
+        height: 70px !important;
+        /* Boyutu küçültür */
+        object-fit: contain;
+        display: block;
+        margin-right: 100px;
+      }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+    <meta name="author" content="pixelstrap" />
+    <link
+      rel="icon"
+      href="../assets/images/gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images//gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <title>Yönetim Şeması Düzenleme Ekranı</title>
+    <!-- Google font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/fontawesome.css"
+    />
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css" />
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css" />
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css" />
+    <!-- Feather icon-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/feather-icon.css"
+    />
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css" />
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link
+      id="color"
+      rel="stylesheet"
+      href="../assets/css/light-1.css"
+      media="screen"
+    />
+    <!-- Responsive css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/responsive.css"
+    />
+  </head>
+
+  <body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader bg-white">
+        <div class="whirly-loader"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+      <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper">
+        <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+      <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-header">
+              <div class="row">
+                <div class="col" style="height: 50px">
+                  <div class="page-header-left">
+                    <h3 style="margin-bottom: 150px">Yönetim Şeması</h3>
+
+                    <ol
+                      class="breadcrumb"
+                      style="margin-left: -204px; margin-bottom: 70px"
+                    >
+                      <li class="breadcrumb-item">
+                        <a href="index.html"><i data-feather="home"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="Kurumsal - Yönetim.html"> Yönetim</a>
+                      </li>
+                      <li class="breadcrumb-item active">Yönetim Şeması Düzenleme</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br /><br />
+          <!-- İçeriklerin Yükleneceği Alan -->
+          <div id="icerikler">
+            <style>
+              .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background-color: #fff;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                display: flex;
+                padding: 20px;
+                gap: 20px;
+                align-items: flex-start;
+                margin-bottom: 40px;
+              }
+
+              .editable-text {
+                border: none !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                color: inherit !important;
+                font: inherit !important;
+                width: 100% !important;
+                padding: 0 !important;
+                outline: none !important;
+              }
+              .baskanİsmi-text {
+                font-size: 1.9em;
+                font-weight: bold;
+                color: #3f3b3b;
+                margin-bottom: 10px;
+              }
+
+              .photo-section {
+                flex: 1;
+                text-align: center;
+              }
+
+              .photo-section img {
+                width: 400px;
+                max-width: 280px;
+                height: 300px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+              }
+
+              .photo-btn {
+                background-color: #5a5ad4;
+                color: white;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+                margin: 5px 0;
+              }
+
+              .photo-btn:hover {
+                opacity: 0.9;
+              }
+
+              .info-section {
+                flex: 2;
+                text-align: left;
+              }
+
+              .info-section h2 {
+                margin: 0;
+                font-size: 1.8em;
+                font-weight: 500;
+                color: #2041c7;
+              }
+
+              .subtitle {
+                color: #888;
+                font-size: 0.9em;
+                font-weight: 300;
+                margin-bottom: 15px;
+              }
+
+              .divider {
+                height: 1px;
+                background-color: #ddd;
+                margin: 10px 0 20px;
+              }
+
+              .mudurlukler-title {
+                color: #888;
+                font-size: 1em;
+                font-weight: 300;
+                margin-bottom: 10px;
+              }
+
+              .mudurlukler {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+              }
+
+              .mudurluk-card {
+                background-color: #5c6fbd;
+                color: white;
+                padding: 6px;
+                border-radius: 8px;
+                flex: 1 1 calc(33.33% - 10px);
+                text-align: left;
+              }
+
+              .mudurluk-card h3 {
+                font-size: 1.2em;
+              }
+              .mudurluk-card p {
+                font-size: 0.8em;
+              }
+
+              .edit-btn,
+              .save-btn {
+                margin-top: 10px;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+              }
+
+              .edit-btn {
+                background-color: #c46e46;
+                color: white;
+              }
+
+              .save-btn {
+                background-color: #28a745;
+                color: white;
+              }
+
+              .edit-btn:hover,
+              .save-btn:hover {
+                opacity: 0.9;
+              }
+
+              .file-input {
+                display: none;
+              }
+            </style>
+
+
+            <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/zinnurbuyukgoz.jpg"
+                  alt="Başkan"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+            </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Zinnur BÜYÜKGÖZ"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                <div
+                  class="dropdown"
+                  style="position: absolute; right: 0; top: 0;"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.4em">
+                  Başkan 
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Teftiş Kurulu Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Kemal TETİK"
+                    />
+                  </div>
+
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Özel Kalem Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Dr. Yusuf ATASEVEN"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Hukuk İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Av. Murat TANCA"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+         <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/dursunali.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Dursun Ali ARSLAN"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                 <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                    <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+
+
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                    <div class="mudurluk-card">
+                      <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Sosyal Destek Hizmetleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Mecit KESKİNOĞLU"
+                    />
+                   </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Zabıta Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Burhan KANDEMİR"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="İklim Değişikliği ve Sıfır Atık Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Senay ALTINTAŞ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Temizlik İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Senay ALTINTAŞ"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+            <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/meclis/ahmetcelebi.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Ahmet HÜSEYİNÇELEBİ"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                  <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                    <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Mali Hizmetler Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Bilgin ALTAY"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="İnsan Kaynakları ve Eğitim Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="İmran AYYILDIZ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Ruhsat Denetim Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Erhan HORUZ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Destek Hizmetleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Carullah Recai ER"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+         
+
+            <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/serifcanpolat.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="8"
+                      r="4"
+                      stroke="#2041c7"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M4 20c0-3.3137 3.134-6 7-6s7 2.6863 7 6"
+                      stroke="#2041c7"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Şerif CANPOLAT"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                  <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                    <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Fen İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Hafız ALTINTAŞ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Park ve Bahçeler Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Tuncay TÜRETKEN"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Etüt ve Proje Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Ömer ŞAHİN"
+                    />
+                  </div>
+                  
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+              <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/baltaci.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="8"
+                      r="4"
+                      stroke="#2041c7"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M4 20c0-3.3137 3.134-6 7-6s7 2.6863 7 6"
+                      stroke="#2041c7"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Muharrem BALTACIOĞLU"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                  <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                     <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Emlak ve İstimlak Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Şaban SARIAY"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Plan ve Proje Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Asker ÇOBAN"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Bilgi İşlem Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Tümay AKSAN"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="İmar ve Şehircilik Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Mücahit KÖKSAL"
+                    />
+                  </div>
+                   <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Yapı ve Kontrol Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Mücahit KÖKSAL"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+              <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/meclis/yandikmahmut.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Mahmut YANDIK"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                  <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                    <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Mezarlıklar Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="İslam ÖZDAĞ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="İşletme ve İştirakler Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Hacı KEY"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Makina İkmal, Bakım ve Onarım Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Dursun Ali YAYLA"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Zeynep YILDIRIM"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+           
+
+            <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/meclis/senerakin.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Şener AKIN"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                  <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                     <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Veteriner İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Cevat ALTINTAŞ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Afet İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Soner BİLİR"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Yazı İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Bahar Özalp"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+            <div class="container">
+              <!-- Fotoğraf ve Buton -->
+              <div class="photo-section">
+                <img
+                  src="../assets/images/kurumsal gebze/mucahitbirben.jpg"
+                  alt="Baskan Yardımcısı"
+                />
+                <input type="file" class="file-input" accept="image/*" />
+              </div>
+
+              <!-- İsim ve Müdürlükler -->
+
+              <div class="info-section">
+                <div
+                  class="header-row"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    position: relative;
+                  "
+                >
+
+                  <input
+                    type="text"
+                    class="baskanİsmi-text"
+                    placeholder="Başkan Adı"
+                    value="Mücahit BİRBEN"
+                    style="
+                      width: auto;
+                      min-width: 180px;
+                      flex: 0 1 auto;
+                      border: none;
+                      background: transparent;
+                      font-size: 1.9em;
+                      font-weight: bold;
+                      color: #3f3b3b;
+                      margin-bottom: 0;
+                      padding: 0;
+                    "
+                  />
+                  <div
+                    class="dropdown"
+                    style="position: absolute; right: 0; top: 0"
+                  >
+                     <button
+                      type="button"
+                      class="photo-btn dropdownBtn"
+                      style="
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: #bdc2ec;
+                        color: #ffffff;
+                        border: none;
+                      "
+                    >
+                      <img src="../assets/images/secenekler.svg" alt="İşlemler" width="18" height="18" />
+                      
+                    </button>
+                    <div
+                      class="dropdown-content"
+                      style="
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        top: 110%;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        min-width: 180px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        z-index: 10;
+                        text-align: left;
+                      "
+                    >
+                      <a
+                        href="#"
+                        class="dropdownPhotoChange"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <rect
+                            x="3"
+                            y="7"
+                            width="18"
+                            height="13"
+                            rx="2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="12"
+                            cy="13.5"
+                            r="3.5"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Fotoğrafı Değiştir
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownEdit"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 20h9"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19.5 3 21l1.5-4L16.5 3.5z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Düzenle
+                      </a>
+                      <a
+                        href="#"
+                        class="dropdownSaveChanges"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          padding: 8px 14px;
+                          color: #333;
+                          text-decoration: none;
+                          gap: 8px;
+                          font-size: 15px;
+                        "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="17 21 17 13 7 13 7 21"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                          <polyline
+                            points="7 3 7 8 15 8"
+                            stroke="#2041c7"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        Değişiklikleri Kaydet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="subtitle" style="font-size: 1.2em">
+                  Başkan Yardımcısı
+                </div>
+                <div class="divider"></div>
+                <div class="mudurlukler-title">İlgili Müdürlükler</div>
+                <div class="mudurlukler">
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Gençlik ve Spor Hizmetleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Burhanettin DEMİRCİ"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Basın Yayın ve Halkla İlişkiler Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Birsen VURDEM"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Kültür İşleri Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Hasan GÜLER"
+                    />
+                  </div>
+                  <div class="mudurluk-card">
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdürlük Adı"
+                      value="Kadın ve Aile Müdürlüğü"
+                    />
+                    <input
+                      type="text"
+                      class="editable-text"
+                      placeholder="Müdür Adı"
+                      value="Zeynep YILDIRIM"
+                    />
+                  </div>
+                </div>
+                <button class="save-btn" style="display: none">Kaydet</button>
+              </div>
+            </div>
+
+            <script>
+              // Her container için dropdown, fotoğraf değiştir, düzenle ve kaydet işlemleri
+              document
+                .querySelectorAll(".container")
+                .forEach(function (container, idx) {
+                  var dropdownBtn = container.querySelector(".dropdownBtn");
+                  var dropdownContent =
+                    container.querySelector(".dropdown-content");
+                  var photoChange = container.querySelector(
+                    ".dropdownPhotoChange"
+                  );
+                  var editLink = container.querySelector(".dropdownEdit");
+                  var saveLink = container.querySelector(
+                    ".dropdownSaveChanges"
+                  );
+                  var fileInput = container.querySelector(".file-input");
+                  var img = container.querySelector(".photo-section img");
+                  var saveBtn = container.querySelector(".save-btn");
+                  var mudurlukCards =
+                    container.querySelectorAll(".mudurluk-card");
+
+                  // Dropdown aç/kapat
+                  if (dropdownBtn && dropdownContent) {
+                    dropdownBtn.addEventListener("click", function (e) {
+                      e.stopPropagation();
+                      dropdownContent.style.display =
+                        dropdownContent.style.display === "block"
+                          ? "none"
+                          : "block";
+                    });
+                    document.addEventListener("click", function (e) {
+                      if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                      }
+                    });
+                  }
+
+                  // Fotoğrafı Değiştir
+                  if (photoChange && fileInput) {
+                    photoChange.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      fileInput.click();
+                      if (dropdownContent)
+                        dropdownContent.style.display = "none";
+                    });
+                    fileInput.addEventListener("change", function (event) {
+                      var file = event.target.files[0];
+                      if (file) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                          img.src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                      }
+                    });
+                  }
+
+                  // Düzenle
+                  if (editLink) {
+                    editLink.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      mudurlukCards.forEach(function (card) {
+                        card.setAttribute("contenteditable", "true");
+                      });
+                      if (saveBtn) saveBtn.style.display = "inline-block";
+                      if (dropdownContent)
+                        dropdownContent.style.display = "none";
+                    });
+                  }
+
+                  // Kaydet
+                  if (saveLink && saveBtn) {
+                    saveLink.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      saveBtn.click();
+                      if (dropdownContent)
+                        dropdownContent.style.display = "none";
+                    });
+                  }
+                  if (saveBtn) {
+                    saveBtn.addEventListener("click", function () {
+                      let valid = true;
+                      mudurlukCards.forEach(function (card, cardIdx) {
+                        card.setAttribute("contenteditable", "false");
+                        var inputs = card.querySelectorAll(
+                          "input.editable-text"
+                        );
+                        var mudurlukAdi = inputs[0] ? inputs[0].value : "";
+                        var mudurAdi = inputs[1] ? inputs[1].value : "";
+                        var emailInput = card.querySelector(
+                          "input[type='email']"
+                        );
+                        var telInput = card.querySelector("input[type='tel']");
+                        var imgEl = card.querySelector("img");
+                        var imgSrc = imgEl ? imgEl.src : "";
+                        if (!mudurlukAdi.trim()) {
+                          alert("Müdürlük adı boş bırakılamaz!");
+                          inputs[0].focus();
+                          valid = false;
+                          return;
+                        }
+                        if (!mudurAdi.trim()) {
+                          alert("Müdür adı boş bırakılamaz!");
+                          inputs[1].focus();
+                          valid = false;
+                          return;
+                        }
+                        if (emailInput && !emailInput.value.trim()) {
+                          alert("E-posta alanı boş bırakılamaz!");
+                          emailInput.focus();
+                          valid = false;
+                          return;
+                        }
+                        if (telInput && !telInput.value.trim()) {
+                          alert("Telefon alanı boş bırakılamaz!");
+                          telInput.focus();
+                          valid = false;
+                          return;
+                        }
+                        var data = {
+                          mudurlukAdi: mudurlukAdi,
+                          mudurAdi: mudurAdi,
+                          email: emailInput ? emailInput.value : "",
+                          tel: telInput ? telInput.value : "",
+                          img: imgSrc,
+                        };
+                        localStorage.setItem(
+                          `yonetim_card_${idx}_${cardIdx}`,
+                          JSON.stringify(data)
+                        );
+                      });
+                      if (valid) {
+                        if (saveBtn) saveBtn.style.display = "none";
+                        alert("Değişiklikler kaydedildi!");
+                      }
+                    });
+                  }
+                });
+
+              // Sayfa açıldığında localStorage'dan yükle
+              window.addEventListener("DOMContentLoaded", function () {
+                document
+                  .querySelectorAll(".container")
+                  .forEach(function (container, idx) {
+                    container
+                      .querySelectorAll(".mudurluk-card")
+                      .forEach(function (card, cardIdx) {
+                        var dataStr = localStorage.getItem(
+                          `yonetim_card_${idx}_${cardIdx}`
+                        );
+                        if (dataStr) {
+                          var data = JSON.parse(dataStr);
+                          var inputs = card.querySelectorAll(
+                            "input.editable-text"
+                          );
+                          if (inputs[0])
+                            inputs[0].value = data.mudurlukAdi || "";
+                          if (inputs[1]) inputs[1].value = data.mudurAdi || "";
+                          var imgEl = card.querySelector("img");
+                          if (imgEl && data.img) imgEl.src = data.img;
+                        }
+                      });
+                  });
+              });
+            </script>
+          </div>
+          </div>
+          </div>
+
+<script>
+  // Tüm dropdown butonlarına tıklanma olayını tanımla
+  document.querySelectorAll('.dropdown-btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.stopPropagation(); // Sayfa geneline yayılmasını engelle
+
+      // Önce diğer açık dropdownları kapat
+      document.querySelectorAll('.dropdown-content').forEach(drop => {
+        if (drop !== this.nextElementSibling) {
+          drop.style.display = 'none';
+        }
+      });
+
+      // Şu anki butonun dropdown'unu aç/kapat
+      const dropdown = this.nextElementSibling;
+      if (dropdown) {
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+      }
+    });
+  });
+
+  // Sayfada boş bir yere tıklanınca tüm dropdown'lar kapanır
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+      dropdown.style.display = 'none';
+    });
+  });
+
+</script>
+
+          
+          <footer style="height: 200px; opacity: 0"></footer>
+
+          <!-- latest jquery-->
+          <script src="../assets/js/jquery-3.2.1.min.js"></script>
+          <!-- Bootstrap js-->
+          <script src="../assets/js/bootstrap/popper.min.js"></script>
+          <script src="../assets/js/bootstrap/bootstrap.js"></script>
+          <!-- feather icon js-->
+          <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+          <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+          <!-- Sidebar jquery-->
+          <script src="../assets/js/sidebar-menu.js"></script>
+          <script src="../assets/js/config.js"></script>
+          <!-- Plugins JS start-->
+
+          <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+          <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+          <script src="../assets/js/typeahead-search/handlebars.js"></script>
+          <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+          <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+          <!-- Theme js-->
+          <script src="../assets/js/script.js"></script>
+          <!-- Bootstrap JS + Popper -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+          <!-- <script src="../assets/js/theme-customizer/customizer.js"></script> -->
+          <!-- Plugin used-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

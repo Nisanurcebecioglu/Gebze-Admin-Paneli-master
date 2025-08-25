@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <style>
+    .logo-img {
+      height: 200px !important;
+      /* Boyutu küçültür */
+      object-fit: contain;
+      display: block;
+    }
+
+    .index-img {
+      height: 70px !important;
+      /* Boyutu küçültür */
+      object-fit: contain;
+      display: block;
+      margin-right: 100px;
+    }
+
+    #header {
+      box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948);
+    }
+
+    .main-header-left {
+      box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948);
+    }
+
+    .sidebar {
+      box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948);
+    }
+
+    .sidebar-user {
+      box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948);
+    }
+
+  </style>
+
+      <style>
+        .buton {
+            text-align: left;
+        }
+
+        #save-button {
+            /* background-color: royalblue; */
+            background-color: royalblue;
+            color: white;
+        }
+
+        #save-button:hover {
+            background-color: rgb(41, 77, 186);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .img-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            /* Overlay için */
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .photo-section {
+            margin-bottom: 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo-wrapper {
+            width: 60%;
+            height: 300px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            /* Tıklanabilir olduğunu belirtmek için */
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .edit-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .photo-wrapper:hover .edit-overlay {
+            opacity: 1;
+        }
+
+        .edit-overlay i {
+            color: #fff;
+            font-size: 36px;
+        }
+
+        .form-group-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .form-group-container input[type="text"],
+        .form-group-container input[type="adres"],
+        .form-group-container input[type="tel"],
+        .form-group-container input[type="password"] {
+            width: calc(100% - 2px);
+            /* Padding'i hesaba kat */
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            /* Padding'in genişliğe dahil edilmesini sağlar */
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group-container input:focus {
+            border-color: #007bff;
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-with-icon input {
+            width: calc(100% - 45px);
+            /* İkon için yer bırak */
+            padding-right: 40px;
+            /* İkonun üzerine binmemesi için */
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            cursor: pointer;
+            /* İkonların tıklanabilir olduğunu belirtmek için */
+        }
+
+
+        .link-group {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .link-group a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .link-group a:hover {
+            color: #0056b3;
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+
+        .save-button {
+            background-color: #3f92ec;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+            width: 50%;
+        }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Duyarlı Tasarım */
+        @media (max-width: 600px) {
+            .img-card {
+                padding: 25px;
+                margin: 15px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .form-group input {
+                font-size: 14px;
+            }
+
+            .save-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        .icon-container {
+            /* position: relative; */
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .icon-container:hover .popup {
+            display: inline-block;
+
+        }
+    </style>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+  <meta name="keywords"
+    content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="pixelstrap">
+  <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images//gebze-belediyesi.ico" type="image/x-icon">
+  <title>Evlendirme Düzenle - Gebze Belediyesi Admin Paneli</title>
+  <!-- Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <!-- Font Awesome-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+  <!-- ico-font-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
+  <!-- Themify icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+  <!-- Flag icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
+  <!-- Feather icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
+  <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+</head>
+
+<body>
+  <!-- Loader starts-->
+  <div class="loader-wrapper">
+    <div class="loader bg-white">
+      <div class="whirly-loader"> </div>
+    </div>
+  </div>
+  <!-- Loader ends-->
+  <!-- page-wrapper Start-->
+  <div class="page-wrapper">
+    <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+      <div class="page-body">
+        <div class="container-fluid">
+          <div class="page-header">
+            <div class="row">
+              <div class="col">
+                <div class="page-header-left">
+                  <h3>Evlendirme Düzenle</h3>
+                  <ol class="breadcrumb" style="margin-top: 85px; margin-left: -275px;">
+                    <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item active">Evlendirme Düzenle</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+
+        <!-- İçeriklerin Yükleneceği Alan -->
+            <div id="icerikler">
+       
+           <div class="card-container">
+
+                    <div class="img-card">
+
+
+                        <div class="form-group-container">
+                            <label for="baslik">Başlık</label>
+                            <input type="text" id="baslik" placeholder="Başlık Girin" value="NİKAH İŞLEMLERİ">
+                        </div>
+                        <div class="form-group-container">
+                            <label for="adres">Adres</label>
+                            <div class="input-with-icon">
+                                <input type="adres" id="adres" placeholder="Adres Girin" value="Hacı Halil, Şht. Numan Dede Cd. No:8, 41400 Gebze/Kocaeli">
+                            </div>
+                        </div>
+                        <div class="form-group-container">
+                            <label for="phone">Telefon Numarası</label>
+                            <div class="input-with-icon">
+                                <input type="tel" id="phone" placeholder="5xx xxx xx xx">
+                            </div>
+                        </div>
+                        <div class="form-group-container">
+                            <label for="aciklama">Açıklama</label>
+                            <div class="input-with-icon">
+                                <textarea id="aciklama" placeholder="Açıklama yazın..."
+                                    style="width: 100%; height: 120px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="photo-section">
+                            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                            <div class="photo-wrapper" id="photoWrapper">
+                                <img src="../assets/images/user/1.png" alt="" id="photo">
+                                <div class="edit-overlay" id="editOverlay">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="form-group-container">
+                            <label for="photoInput">Fotoğraf</label>
+                            <input type="file" id="photoInput" accept="image/*">
+                        </div>
+
+                        <div class="buton">
+                            <button id="save-button" class="btn">Kaydet</button>
+                            <button id="cancel-button" class="btn btn-success">Geri Dön</button>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        
+        
+        
+        </div>
+        <footer style="height: 200px; opacity: 0"></footer>
+
+        <!-- latest jquery-->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap js-->
+        <script src="../assets/js/bootstrap/popper.min.js"></script>
+        <script src="../assets/js/bootstrap/bootstrap.js"></script>
+        <!-- feather icon js-->
+        <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+        <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+        <!-- Sidebar jquery-->
+        <script src="../assets/js/sidebar-menu.js"></script>
+        <script src="../assets/js/config.js"></script>
+        <!-- Plugins JS start-->
+
+        <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+        <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+        <script src="../assets/js/typeahead-search/handlebars.js"></script>
+        <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+        <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+        <!-- Theme js-->
+        <script src="../assets/js/script.js"></script>
+        <!-- Bootstrap JS + Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- <script src="../assets/js/theme-customizer/customizer.js"></script> -->
+        <!-- Plugin used-->
+
+
+
+
+</body>
+
+</html>

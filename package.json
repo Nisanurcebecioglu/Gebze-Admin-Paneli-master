@@ -1,29 +1,42 @@
 {
-  "name": "theme",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "gebze-admin-panel",
+  "version": "2.0.0",
+  "description": "Gebze Belediyesi Admin Panel - TypeScript Version",
+  "main": "dist/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "tsc && npm run serve",
+    "serve": "npx http-server dist -p 3000 -o",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "admin-panel",
+    "typescript",
+    "gebze",
+    "belediye",
+    "dashboard"
+  ],
+  "author": "Gebze Belediyesi",
+  "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "@types/node": "^20.0.0",
+    "@types/jquery": "^3.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "http-server": "^14.0.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
-    "check": "^1.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-livereload": "^4.0.1",
-    "gulp-livereload-2": "^3.8.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-w3c-html-validator": "^1.4.2",
-    "jade": "^1.11.0",
-    "livereload": "^0.7.0",
-    "npm": "^6.5.0"
+    "jquery": "^3.7.0"
   },
-  "description": ""
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
 }

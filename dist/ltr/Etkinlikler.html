@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="endless admin is super flexible, powerful, clean & modern responsive bootstrap 4 admin template with unlimited possibilities.">
+  <meta name="keywords"
+    content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="pixelstrap">
+  <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+  <title>Etkinlikler - Gebze Belediyesi Admin Paneli</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+  <link rel="stylesheet" type="text/css" href="CSS/etkinlikler.css">
+</head>
+
+<body>
+  <div class="loader-wrapper">
+    <div class="loader bg-white">
+      <div class="whirly-loader"></div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="page-main-header">
+      <div class="main-header-right row" style="box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948)">
+        <div class="main-header-left d-lg-none">
+          <div class="logo-wrapper">
+            <a href="../index.html"><img src="../assets/images/GEBZElogo-5.png" alt="" class="index-img" /></a>
+          </div>
+        </div>
+        <div class="mobile-sidebar d-block">
+          <div class="media-body text-right switch-sm">
+            <label class="switch"><a href="#"><i id="sidebar-toggle" data-feather="align-left"></i></a></label>
+          </div>
+        </div>
+        <div class="nav-right col p-0">
+          <ul class="nav-menus">
+            <li>
+              <form class="form-inline search-form" action="#" method="get">
+                <div class="form-group">
+                  <div class="Typeahead Typeahead--twitterUsers">
+                    <div class="u-posRelative">
+                      <input class="Typeahead-input form-control-plaintext" id="demo-input" type="text" name="q"
+                        placeholder="Arama yap..." />
+                      <div class="spinner-border Typeahead-spinner" role="status">
+                        <span class="sr-only">Yükleniyor...</span>
+                      </div>
+                      <span class="d-sm-none mobile-search"><i data-feather="search"></i></span>
+                    </div>
+                    <div class="Typeahead-menu"></div>
+                  </div>
+                </div>
+              </form>
+            </li>
+
+            <li class="onhover-dropdown">
+              <div class="media align-items-center">
+                <img class="align-self-center pull-right img-50 rounded-circle" src="../assets/images/user/user.png"
+                  alt="header-user" />
+              </div>
+              <ul class="profile-dropdown onhover-show-div p-20">
+                <li>
+                  <a href="Profil.html"><i data-feather="user"></i> Profili Düzenle</a>
+                </li>
+
+                <li>
+                  <a href="#"><i data-feather="settings"></i> Ayarlar</a>
+                </li>
+                <li>
+                  <a href="#"><i data-feather="log-out"></i> Çıkış Yap</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-lg-none mobile-toggle pull-right">
+            <i data-feather="more-horizontal"></i>
+          </div>
+        </div>
+        <script id="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">
+              <div class="ProfileCard-avatar"><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-airplay m-0"
+                ><path
+                    d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                  ></path><polygon
+                    points="12 15 17 21 7 21 12 15"
+                  ></polygon></svg></div>
+              <div class="ProfileCard-details">
+                <div class="ProfileCard-realName">{{name}}</div>
+              </div>
+            </div>
+          </script>
+        <script id="empty-template" type="text/x-handlebars-template">
+            <div class="EmptyMessage">Aradığınız sonuç bulunamadı. Büyük
+              ihtimalle sistem şu an kapalı, üzücü ama kısa sürede çözeceğiz!</div>
+          </script>
+      </div>
+    </div>
+    <div class="page-body-wrapper">
+      <div class="page-sidebar bg-light">
+        <div class="main-header-left d-none d-lg-block" style="box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948)">
+          <div class="logo-wrapper">
+            <a href="../index.html"><img src="../assets/images/GEBZElogo-5.png" alt="" class="logo-img" /></a>
+          </div>
+        </div>
+
+        <div class="sidebar custom-scrollbar bg-light" style="box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948)">
+          <div class="sidebar-user text-center" style="box-shadow: 0 4px 10px rgba(56, 119, 255, 0.948)">
+            <div>
+              <img class="img-60 rounded-circle" src="../assets/images/user/user.png" alt="#" />
+              <div class="profile-edit">
+                <a href="Profil.html" target="_blank"><i data-feather="edit"></i></a>
+              </div>
+            </div>
+            <h6 class="mt-3 f-14 text-dark">İsim Soyisim</h6>
+            <p class="text-dark">Kademe</p>
+          </div>
+          <ul class="sidebar-menu bg-light">
+            <li>
+              <a class="sidebar-header text-dark" href="../index.html"><i
+                  data-feather="home"></i><span>Anasayfa</span><span class="badge badge-pill badge-primary"></span></a>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="#"><i data-feather="briefcase"></i>
+                <span>Kurumsal</span>
+                <i class="fa fa-angle-right pull-right"></i>
+              </a>
+              <ul class="sidebar-submenu">
+                <li>
+                  <a href="Kurumsal - Yönetim.html" class="text-dark"><i class="fa fa-circle text-dark"></i>Yönetim</a>
+                </li>
+                <li>
+                  <a href="Kurumsal - Vizyon Misyon.html" class="text-dark"><i
+                      class="fa fa-circle text-dark"></i>Vizyon-Misyon-İlke</a>
+                </li>
+                <li>
+                  <a href="Kurumsal - Raporlar.html" class="text-dark"><i
+                      class="fa fa-circle text-dark"></i>Raporlar</a>
+                </li>
+                <li>
+                  <a href="Kurumsal - Komisyonlar.html" class="text-dark"><i
+                      class="fa fa-circle text-dark"></i>Komisyonlar</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="Haberler.html"><i
+                  data-feather="file-text"></i><span>Haberler</span></a>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="#"><i data-feather="map-pin"></i><span>Gebze</span><i
+                  class="fa fa-angle-right pull-right"></i></a>
+              <ul class="sidebar-submenu">
+                <li>
+                  <a href="Gebze - Tarihce.html" class="text-dark"><i class="fa fa-circle text-dark"></i>Tarihten
+                    Günümüze
+                    Gebze</a>
+                </li>
+                <li>
+                  <a href="Gebze - Gebze Yonetim.html" class="text-dark"><i class="fa fa-circle text-dark"></i>Gebze
+                    Yönetim</a>
+                </li>
+                <li>
+                  <a href="Gebze - Sanal Tur.html" class="text-dark"><i class="fa fa-circle text-dark"></i>360 Sanal
+                    Tur</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="Hizmetler.html"><i
+                  data-feather="layers"></i><span>Hizmetler</span></a>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="Etkinlikler.html"><i
+                  data-feather="slack"></i><span>Etkinlikler</span></a>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="Yayınlarımız.html"><i
+                  data-feather="book"></i><span>Yayınlarımız</span></a>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="İletisim.html"><i
+                  data-feather="mail"></i><span>İletişim</span></a>
+            </li>
+            <li>
+              <a class="sidebar-header text-dark" href="kullanicilar.html"><i
+                  data-feather="users"></i><span>Kullanıcılar</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="page-header-left" style="margin-top: -40px; float: left">
+                <h3>Etkinlikler</h3>
+                <ol class="breadcrumb" style="margin-top: 65px; margin-left: -115px">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html"><i data-feather="home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    <a href="Etkinlikler.html">Etkinlikler</a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benim yaptığım navbar kısmı -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="margin-top: -30px !important">
+          <div class="container-fluid d-flex justify-content-end" id="nav">
+            <button class="buton ekle-butonu" onclick="ekle()">
+              <div class="icon arti"></div>
+              <span>Ekle</span>
+            </button>
+            <button class="buton sil-butonu" onclick="sil()">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                aria-hidden="true" focusable="false">
+                <path
+                  d="M3 6h18v2H3V6zm2 3h14l-1.5 12.5a1 1 0 01-1 .5H8a1 1 0 01-1-.5L5 9zm4 2v7h2v-7H9zm4 0v7h2v-7h-2z" />
+              </svg>
+              <span>Sil</span>
+            </button>
+          </div>
+        </nav>
+
+        <br /><br />
+
+        <!--İÇERİKLER-->
+        <div id="icerikler">
+          <div class="container-sm ml-1" style="margin-top: -40px">
+            <table class="table" id="editActForm" style="margin-top: -30px">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 3%">
+                    <input id="ana-checkbox" type="checkbox" name="allCheck" id="allCheck" style="width: 10px" />
+                  </th>
+                  <th scope="col" style="width: 10%">Etkinlik Resmi</th>
+                  <th scope="col" style="width: 25%">Etkinlik Başlığı</th>
+                  <th scope="col" style="width: 15%">Tarih</th>
+                  <th scope="col" style="width: 25%">Saat</th>
+
+                  <th scope="col" style="text-align: right">
+                    <input type="text" name="search" id="search" placeholder="Ara" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="tableContent">
+                <tr>
+                  <td style="width: 3%">
+                    <input class="checkbox-item" type="checkbox" name="allCheck" style="width: 10px" />
+                  </td>
+                  <td style="width: 20%">
+                    <img src="../assets/images/gebze-belediyesi.ico" alt="gebze-belediyesi-img" width="30px"
+                      height="30px" style="margin-left: 18%" />
+                  </td>
+                  <td style="width: 20%" class="act dot" title="Yetişkin Sineması - Babam ve Oğlum">
+                    Yetişkin Sineması - Babam ve Oğlum
+                  </td>
+                  <td style="width: 10%" class="date">10.02.2025</td>
+                  <td style="width: 40%" class="exp dot" title="...">
+                    20:45
+                  </td>
+                  <td scope="row" style="text-align: right">
+                    <div class="dropdown-container">
+                      <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                        İşlemler
+                      </button>
+                      <div class="dropdown-menu">
+                        <button
+                          onclick="editActivities('../assets/images/gebze-belediyesi.ico', 'etkinlik', '19.05.2025', '20:45',this)">
+                          <img src="../assets/images/dropdown_svg/edit.svg" alt="edit" width="10%" height="10%" />
+                          Düzenle
+                        </button>
+                        <button onclick="remove()" id="remove">
+                          <img src="../assets/images/dropdown_svg/rubbish-bin.svg" alt="remove" width="10%"
+                            height="10%" />
+                          Sil
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- ... diğer satırlar ... -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer style="height: 200px; opacity: 0"></footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/bootstrap/popper.min.js"></script>
+  <script src="../assets/js/bootstrap/bootstrap.js"></script>
+  <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+  <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+  <script src="../assets/js/sidebar-menu.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+  <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+  <script src="../assets/js/typeahead-search/handlebars.js"></script>
+  <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../ltr/JavaScript/etkinlikler.js"></script>
+  <script src="../assets/js/html-include.js"></script>
+</body>
+
+</html>

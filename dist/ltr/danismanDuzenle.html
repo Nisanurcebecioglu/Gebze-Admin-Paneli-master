@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    
+
+ 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+    <meta name="author" content="pixelstrap" />
+    <link
+      rel="icon"
+      href="../assets/images/gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images//gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <title>Danışman Düzenleme Ekranı</title>
+    <!-- Google font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/fontawesome.css"
+    />
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css" />
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css" />
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css" />
+    <!-- Feather icon-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/feather-icon.css"
+    />
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css" />
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link
+      id="color"
+      rel="stylesheet"
+      href="../assets/css/light-1.css"
+      media="screen"
+    />
+    <!-- Responsive css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/responsive.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ltr/CSS/danısmanDuzenle.css"
+    />
+  </head>
+
+  <body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader bg-white">
+        <div class="whirly-loader"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+      <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper">
+        <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-header">
+              <div class="row">
+                <div class="col" style="height: 50px">
+                  <div class="page-header-left">
+                    <h3 style="margin-bottom: 150px">
+                      Danışmanlar 
+                    </h3>
+
+                    <ol
+                      class="breadcrumb"
+                      style="margin-left: -177px; margin-bottom: 70px"
+                    >
+                      <li class="breadcrumb-item">
+                        <a href="index.html"><i data-feather="home"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="Kurumsal - Yönetim.html"> Yönetim</a>
+                      </li>
+                      <li class="breadcrumb-item active">
+                        Danışmanlar
+
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<br><br>
+          <!-- İçeriklerin Yükleneceği Alan -->
+          <div id="icerikler">
+              <div class="container">
+              <!-- 1. Danışman -->
+              <div class="card" >
+                <img
+                  id="danisman1Image"
+                  src="../assets/images/kurumsal gebze/Yusuf-BURKUT.jpg"
+                  alt="Fotoğraf"
+                  style="display: block; margin: 0 auto; width: 200px"
+                />
+
+                <h3 contenteditable="true" id="danisman1Isim">Yusuf BURKUT</h3>
+                <input
+                  type="text"
+                  id="danisman1Email"
+                  placeholder="E-posta girin"
+                  value="yusuf.burkut@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="danisman1Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                <input
+                  type="file"
+                  id="danisman1Upload"
+                  accept="image/*"
+                  style="display: none"
+                  onchange="previewImage(event, 'danisman1')"
+                />
+                
+                <div style="display: flex; gap: 10px;">
+                  <button
+                    class="degistir-btn"
+                    onclick="document.getElementById('danisman2Upload').click()"
+                  >
+                    Fotoğraf Seç
+                </button>
+
+               
+                  <button class="kaydet" onclick="saveData('danisman2')">
+                    Kaydet
+                  </button>
+                  </div>
+                </div>
+                
+              
+
+              <!-- 2. Danışman -->
+              <div class="card" >
+                <img
+                  id="danisman2Image"
+                  src="../assets/images/kurumsal gebze/Remzi-SEKER.jpg"
+                  alt="Fotoğraf"
+                  style="display: block; margin: 0 auto; width: 200px"
+                />
+
+                <h3 contenteditable="true" id="danisman2Isim">Remzi ŞEKER</h3>
+                <input
+                  type="text"
+                  id="danisman2Email"
+                  placeholder="E-posta girin"
+                  value="remzi.seker@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="danisman2Telefon"
+                  placeholder="Telefon girin"
+                  value=" 0 262 642 04 30"
+                />
+                <input
+                  type="file"
+                  id="danisman2Upload"
+                  accept="image/*"
+                  style="display: none"
+                  onchange="previewImage(event, 'danisman2')"
+                />
+                 <div style="display: flex; gap: 10px;">
+                  <button
+                    class="degistir-btn"
+                    onclick="document.getElementById('danisman2Upload').click()"
+                  >
+                    Fotoğraf Seç
+                </button>
+
+               
+                  <button class="kaydet" onclick="saveData('danisman2')">
+                    Kaydet
+                  </button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+              <footer style="height: 200px; opacity: 0"></footer>
+
+              <!-- latest jquery-->
+              <script src="../assets/js/jquery-3.2.1.min.js"></script>
+              <!-- Bootstrap js-->
+              <script src="../assets/js/bootstrap/popper.min.js"></script>
+              <script src="../assets/js/bootstrap/bootstrap.js"></script>
+              <!-- feather icon js-->
+              <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+              <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+              <!-- Sidebar jquery-->
+              <script src="../assets/js/sidebar-menu.js"></script>
+              <script src="../assets/js/config.js"></script>
+              <!-- Plugins JS start-->
+
+              <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+              <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+              <script src="../assets/js/typeahead-search/handlebars.js"></script>
+              <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+              <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+              <!-- Theme js-->
+              <script src="../assets/js/script.js"></script>
+              <!-- Bootstrap JS + Popper -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+              
+              <!-- <script src="../assets/js/theme-customizer/customizer.js"></script> -->
+              <!-- Plugin used-->
+
+              
+             <!-- Sayfanın Script kodlarını içeren sayfaya alttaki linke ctrl+click yaparak ulaşabilirsiniz -->
+              <script src="../ltr/JavaScript/danısmanDuzenle.js"></script>
+
+
+
+
+
+              </div>
+            </div>
+
+            </body>
+            </html>

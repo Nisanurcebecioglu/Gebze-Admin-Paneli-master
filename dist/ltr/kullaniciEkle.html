@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin paneli, gebze admin paneli, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images//gebze-belediyesi.ico" type="image/x-icon">
+    <title>Kullanıcı Ekle - Gebze Belediyesi Admin Paneli</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="Profil/profil.css">
+
+    <style>
+        .buton {
+            text-align: left;
+        }
+
+        #save-button {
+            /* background-color: royalblue; */
+            background-color: royalblue;
+            color: white;
+        }
+
+        #save-button:hover {
+            background-color: rgb(41, 77, 186);
+        }
+
+        .form-select {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding: 5px;
+            border-width: 1px;
+            border-color: rgb(221, 221, 221);
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="loader bg-white">
+            <div class="whirly-loader"> </div>
+        </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+        <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col">
+                                <div class="page-header-left">
+                                    <h3>Kullanıcı Ekle</h3>
+                                    <ol class="breadcrumb" style="margin-top: 85px; margin-left: -205px;">
+                                        <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Kullanıcı Ekle</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <!-- İçeriklerin Yükleneceği Alan -->
+
+                <div class="card-container">
+                    <div class="profile-card">
+                        <div class="profile-photo-section">
+                            <input type="file" id="profilePhotoInput" accept="image/*" style="display: none;">
+                            <div class="profile-photo-wrapper" id="profilePhotoWrapper">
+                                <img src="../assets/images/user/user.png" alt="" id="profilePhoto">
+                                <div class="edit-overlay" id="editOverlay">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-container">
+                            <label for="fullName">Ad - Soyad</label>
+                            <input type="text" id="fullName" placeholder="Adınızı ve Soyadınızı Girin">
+                        </div>
+                        <div class="form-group-container">
+                            <label for="tckn">TC Kimlik Numarası</label>
+                            <input type="text" id="tckn" maxlength="11" pattern="\d{11}"
+                                placeholder="TC kimlik numaranızı girin" required
+                                oninput="this.value = this.value.replace(/\D/g, '').slice(0,11)">
+                        </div>
+                        <div class="form-group-container">
+                            <label for="email">E-Posta</label>
+                            <div class="input-with-icon">
+                                <input type="email" id="email" placeholder="ornek@mail.com">
+                                <div class="icon-container">
+                                    <i class="fas fa-check-circle verified-icon green-icon"
+                                        style="margin-top: -10px;"></i>
+                                    <div class="popup">
+                                        <div class="popup-header-onaylandi">Onaylandı!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-container">
+                            <label for="phone">Telefon Numarası</label>
+                            <div class="input-with-icon">
+                                <input type="tel" id="phone" placeholder="5xx xxx xx xx">
+                                <div class="icon-container">
+                                    <i class="fas fa-times-circle unverified-icon red-icon"
+                                        style="margin-top: -10px;"></i>
+                                    <div class="popup">
+                                        <div class="popup-header">Onaylanmadı!</div>
+                                    </div>
+                                    <small id="phone-error" style="color: #dc3545; display: none;"></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="newPassword">Yeni Şifre</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="newPassword" placeholder="Yeni şifrenizi girin">
+                                <i class="fas fa-eye-slash password-toggle-icon" id="toggleNewPassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group-container">
+                            <label for="confirmNewPassword">Yeni Şifre Tekrar</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="confirmNewPassword"
+                                    placeholder="Yeni şifrenizi tekrar girin">
+                                <i class="fas fa-eye-slash password-toggle-icon" id="toggleConfirmNewPassword"></i>
+                            </div>
+                        </div>
+                        <div class="buton">
+                            <button id="save-button" class="btn" onclick="kaydetKullanici()">Kaydet</button>
+                            <button id="cancel-button" class="btn btn-success">Geri Dön</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- latest jquery-->
+                <script src="../assets/js/jquery-3.2.1.min.js"></script>
+                <!-- Bootstrap js-->
+                <script src="../assets/js/bootstrap/popper.min.js"></script>
+                <script src="../assets/js/bootstrap/bootstrap.js"></script>
+                <!-- feather icon js-->
+                <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+                <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+                <!-- Sidebar jquery-->
+                <script src="../assets/js/sidebar-menu.js"></script>
+                <script src="../assets/js/config.js"></script>
+                <!-- Plugins JS start-->
+                <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+                <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+                <script src="../assets/js/typeahead-search/handlebars.js"></script>
+                <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+                <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+                <!-- Theme js-->
+                <script src="../assets/js/script.js"></script>
+                <!-- Bootstrap JS + Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Proje Kodları -->
+                <script>
+                    function kaydetKullanici() {
+                        const fullName = document.getElementById("fullName").value.trim();
+                        const tckn = document.getElementById("tckn").value.trim();
+                        const email = document.getElementById("email").value.trim();
+                        const phone = document.getElementById("phone").value.trim();
+                        const newPassword = document.getElementById("newPassword").value;
+                        const confirmNewPassword = document.getElementById("confirmNewPassword").value;
+
+                        // Basit doğrulama
+                        if (!fullName || !tckn || !email || !phone || !newPassword || !confirmNewPassword) {
+                            Swal.fire("Hata", "Lütfen tüm alanları doldurun.", "error");
+                            return;
+                        }
+                        if (newPassword !== confirmNewPassword) {
+                            Swal.fire("Hata", "Şifreler uyuşmuyor.", "error");
+                            return;
+                        }
+
+                        // Profil fotoğrafı base64 olarak alınır (varsa)
+                        let profilePhoto = document.getElementById("profilePhoto").src;
+                        if (profilePhoto.includes("user.png")) profilePhoto = ""; // default ise boş bırak
+
+                        const kullanici = {
+                            fullName,
+                            tckn,
+                            email,
+                            phone,
+                            newPassword,
+                            profilePhoto
+                        };
+
+                        // URL'de index parametresi varsa düzenleme modu
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const index = urlParams.get('index');
+
+                        if (index) {
+                            // Düzenleme modu - localStorage'dan kullanıcıları al ve güncelle
+                            let kullanicilar = JSON.parse(localStorage.getItem("kullanicilar")) || [];
+                            if (kullanicilar[index]) {
+                                kullanicilar[index] = kullanici;
+                                localStorage.setItem("kullanicilar", JSON.stringify(kullanicilar));
+                                Swal.fire("Başarılı", "Kullanıcı güncellendi.", "success").then(() => {
+                                    window.location.href = "kullanicilar.html";
+                                });
+                            } else {
+                                Swal.fire("Hata", "Kullanıcı bulunamadı.", "error");
+                            }
+                        } else {
+                            // Yeni kullanıcı ekleme modu
+                            let kullanicilar = JSON.parse(localStorage.getItem("kullanicilar")) || [];
+                            kullanicilar.push(kullanici);
+                            localStorage.setItem("kullanicilar", JSON.stringify(kullanicilar));
+                            Swal.fire("Başarılı", "Kullanıcı kaydedildi.", "success").then(() => {
+                                window.location.href = "kullanicilar.html";
+                            });
+                        }
+                    }</script>
+
+
+                <script>
+                    // URL parametrelerini oku ve form alanlarını doldur
+                    window.onload = function () {
+                        const urlParams = new URLSearchParams(window.location.search);
+
+                        // Eğer URL'de parametreler varsa (düzenleme modu)
+                        if (urlParams.has('fullName')) {
+                            const fullName = urlParams.get('fullName');
+                            const email = urlParams.get('email');
+                            const phone = urlParams.get('phone');
+
+                            // Form alanlarını doldur
+                            if (fullName) document.getElementById('fullName').value = fullName;
+                            if (email) document.getElementById('email').value = email;
+                            if (phone) document.getElementById('phone').value = phone;
+
+
+                            // Başlığı güncelle
+                            document.querySelector('h2').textContent = 'Kullanıcı Düzenle';
+
+                            // Kaydet butonunu güncelle
+                            document.getElementById('save-button').textContent = 'Güncelle';
+                        }
+                    };
+                    document.addEventListener('DOMContentLoaded', () => {
+                        // Profil Fotoğrafı Yükleme İşlevi
+                        const profilePhotoWrapper = document.getElementById('profilePhotoWrapper');
+                        const profilePhotoInput = document.getElementById('profilePhotoInput');
+                        const profilePhoto = document.getElementById('profilePhoto');
+
+                        profilePhotoWrapper.addEventListener('click', () => {
+                            profilePhotoInput.click(); // Gizli dosya input'unu tetikle
+                        });
+
+                        profilePhotoInput.addEventListener('change', (event) => {
+                            const file = event.target.files[0];
+                            if (file) {
+                                const reader = new FileReader();
+                                reader.onload = (e) => {
+                                    profilePhoto.src = e.target.result; // Seçilen resmi önizleme olarak göster
+                                };
+                                reader.readAsDataURL(file);
+                            }
+                        });
+
+                        const phoneInput = document.getElementById('phone');
+                        const phoneError = document.getElementById('phone-error');
+
+                        phoneInput.addEventListener('input', (e) => {
+                            let value = e.target.value.replace(/\D/g, ''); // Sadece rakamlar
+                            let formattedValue = '';
+
+                            // Maskeleme işlemi
+                            if (value.length > 0) {
+                                formattedValue += '(' + value.substring(0, 3);
+                            }
+                            if (value.length > 3) {
+                                formattedValue += ') ' + value.substring(3, 6);
+                            }
+                            if (value.length > 6) {
+                                formattedValue += ' ' + value.substring(6, 8);
+                            }
+                            if (value.length > 8) {
+                                formattedValue += ' ' + value.substring(8, 10);
+                            }
+                            e.target.value = formattedValue;
+
+                            // Hata kontrolü
+                            if (value.length > 0 && value[0] !== '5') {
+                                phoneInput.style.borderColor = '#dc3545'; // kırmızı kenarlık
+                                phoneError.textContent = 'Telefon numarası 5 ile başlamalıdır.';
+                                phoneError.style.display = 'block';
+                            } else {
+                                phoneInput.style.borderColor = ''; // kenarlığı sıfırla
+                                phoneError.textContent = '';
+                                phoneError.style.display = 'none';
+                            }
+                        });
+
+                        document.getElementById('cancel-button').addEventListener('click', geriDon);
+                        function geriDon() {
+                            window.location.href = "kullanicilar.html";
+                        }
+
+
+                    });
+
+                    function tabloyaSatirEkle(ad, soyad, email, telefon) {
+                        const tablo = document.getElementById("kullaniciTablosu");
+                        const yeniSatir = tablo.insertRow(-1);
+
+                        yeniSatir.innerHTML = `
+    <td></td>
+    <td></td>
+    <td>${ad} ${soyad}</td>
+    <td>${email}</td>
+    <td>${telefon}</td>
+    <td>
+      <button onclick="duzenle(this)">Düzenle</button>
+    </td>
+  `;
+                    }
+
+                    function tabloSatirGuncelle(index, ad, soyad, email, telefon) {
+                        const tablo = document.getElementById("kullaniciTablosu");
+                        const satir = tablo.rows[index];
+
+                        satir.cells[2].textContent = `${ad} ${soyad}`;
+                        satir.cells[3].textContent = email;
+                        satir.cells[4].textContent = telefon;
+                    }
+
+
+                    // Şifre Göster/Gizle İşlevi
+                    const togglePassword = (inputId, toggleIconId) => {
+                        const passwordInput = document.getElementById(inputId);
+                        const toggleIcon = document.getElementById(toggleIconId);
+
+                        toggleIcon.addEventListener('click', () => {
+                            if (passwordInput.type === 'password') {
+                                passwordInput.type = 'text';
+                                toggleIcon.classList.remove('fa-eye-slash');
+                                toggleIcon.classList.add('fa-eye'); // Normal göz
+                            } else {
+                                passwordInput.type = 'password';
+                                toggleIcon.classList.remove('fa-eye');
+                                toggleIcon.classList.add('fa-eye-slash'); // Üstü çizili göz
+                            }
+                        });
+                    };
+
+                    togglePassword('newPassword', 'toggleNewPassword');
+                    togglePassword('confirmNewPassword', 'toggleConfirmNewPassword');
+
+
+                </script>
+
+                <!-- sayfanın en altında -->
+                <script>
+                    window.onload = function () {
+                        const params = new URLSearchParams(window.location.search);
+                        const fullName = params.get("fullName");
+                        const email = params.get("email");
+                        const phone = params.get("phone");
+
+                        if (fullName) document.getElementById("fullName").value = fullName;
+                        if (email) document.getElementById("email").value = email;
+                        if (phone) document.getElementById("phone").value = phone;
+                    };
+                </script>
+
+                <!-- Head veya body sonuna -->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
+    />
+    <meta
+      name="keywords"
+      content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
+    />
+    <meta name="author" content="pixelstrap" />
+    <link
+      rel="icon"
+      href="../assets/images/gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images//gebze-belediyesi.ico"
+      type="image/x-icon"
+    />
+    <title>Yardımcı Düzenleme Ekranı</title>
+    <h3 style="margin-top: 0; padding-top: 0">Anasayfa</h3>
+    <!-- Google font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/fontawesome.css"
+    />
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css" />
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css" />
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css" />
+    <!-- Feather icon-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/feather-icon.css"
+    />
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css" />
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link
+      id="color"
+      rel="stylesheet"
+      href="../assets/css/light-1.css"
+      media="screen"
+    />
+    <!-- Responsive css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/responsive.css"
+    />
+     <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ltr/CSS/yardımcıDuzenle.css"
+    />
+    
+  </head>
+
+  <body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader bg-white">
+        <div class="whirly-loader"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+      <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+      <!-- Page Body Start-->
+    
+      <div class="page-body-wrapper"  style="margin-top: -50px">
+        <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-header">
+              <div class="row">
+                <div class="col">
+                  <div
+                    class="page-header-left"
+                    style="margin-top: -30px; float: left"
+                  >
+                    <h3>Yardımcılar Düzenleme Ekranı</h3>
+                    <ol
+                      class="breadcrumb"
+                      style="margin-top: 65px; margin-left: -417px"
+                    >
+                      <li class="breadcrumb-item">
+                        <a href="index.html"><i data-feather="home"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="Kurumsal - Yönetim.html">Kurumsal</a>
+                       </li>
+                      <li class="breadcrumb-item active">
+                      
+                          Yardımcılar Düzenleme Ekranı
+                        >
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- İçeriklerin Yükleneceği Alan -->
+          <div id="icerikler">
+            <div class="container">
+              <!-- Yardımcılar (1-6) -->
+              <div class="card">
+        <img
+          id="yardimci1Image"
+          src="../assets/images/kurumsal gebze/dursunali.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px; border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci1FileInput" />
+
+                <h3 contenteditable="true" id="yardimci1Isim">
+                  Dursun Ali Arslan
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci1Email"
+                  placeholder="E-posta girin"
+                  value="dursunali.arslan@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci1Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                <input
+                  type="text"
+                  id="yardimci1Biyografi"
+                  placeholder="Biyografi girin"
+                
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right: 45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Fotoğrafı Değiştir
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+    <!-- Yardımcı 3 -->
+                  <div class="card">
+        <img
+          id="yardimci2Image"
+          src="../assets/images/kurumsal gebze/meclis/ahmetcelebi.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px; border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci2FileInput" />
+
+                <h3 contenteditable="true" id="yardimci2Isim">
+                  Ahmet HÜSEYİNÇELEBİ
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci2Email"
+                  placeholder="E-posta girin"
+                  value="ahmet.huseyincelebi@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci2Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                                <input
+                  type="text"
+                  id="yardimci2Biyografi"
+                  placeholder="Biyografi girin"
+            
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right: 45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                       <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+
+                      Fotoğrafı Değiştir
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Yardımcı 2 -->
+                  <div class="card">
+        <img
+          id="yardimci3Image"
+          src="../assets/images/kurumsal gebze/serifcanpolat.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px; border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci3FileInput" />
+
+                <h3 contenteditable="true" id="yardimci3Isim">
+                  Şerif CANPOLAT
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci3Email"
+                  placeholder="E-posta girin"
+                  value="serif.canpolat@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci3Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                                <input
+                  type="text"
+                  id="yardimci3Biyografi"
+                  placeholder="Biyografi girin"
+               
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right: 45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Fotoğrafı Değiştir
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+          
+
+              <!-- Yardımcı 4 -->
+                  <div class="card">
+        <img
+          id="yardimci4Image"
+          src="../assets/images/kurumsal gebze/muharrembaltaci.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px ;border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci4FileInput" />
+
+                <h3 contenteditable="true" id="yardimci4Isim">
+                  Muharrem BALTACIOĞLU
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci4Email"
+                  placeholder="E-posta girin"
+                  value="muharrem.baltacioglu@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci4Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                                <input
+                  type="text"
+                  id="yardimci4Biyografi"
+                  placeholder="Biyografi girin"
+                 
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right:45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Fotoğrafı Değiştir
+                    </a>
+ 
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Yardımcı 5 -->
+                  <div class="card">
+        <img
+          id="yardimci5Image"
+          src="../assets/images/kurumsal gebze/meclis/yandikmahmut.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px ;border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci5FileInput" />
+
+                <h3 contenteditable="true" id="yardimci5Isim">
+                  Mahmut YANDIK
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci5Email"
+                  placeholder="E-posta girin"
+                  value="mahmut.yandik@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci5Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                                <input
+                  type="text"
+                  id="yardimci5Biyografi"
+                  placeholder="Biyografi girin"
+                 
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right: 45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Fotoğrafı Değiştir
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+  
+              <!--Yardımcı 6 -->
+                 <div class="card">
+        <img
+          id="yardimci6Image"
+          src="../assets/images/kurumsal gebze/meclis/senerakin.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px ;border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci6FileInput" />
+
+                <h3 contenteditable="true" id="yardimci6Isim">
+                  Şener AKIN
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci6Email"
+                  placeholder="E-posta girin"
+                  value="sener.akin@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci6Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                                <input
+                  type="text"
+                  id="yardimci6Biyografi"
+                  placeholder="Biyografi girin"
+                
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right: 45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Fotoğrafı Değiştir
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Yardımcı 7 -->
+
+                 <div class="card">
+        <img
+          id="yardimci7Image"
+          src="../assets/images/kurumsal gebze/mucahitbirben.jpg"
+          alt="Fotoğraf"
+          style="display: block; margin: 0 auto; width: 200px ;border:none"
+        />
+        <input type="file" accept="image/*" style="display:none" id="yardimci7FileInput" />
+
+                <h3 contenteditable="true" id="yardimci7Isim">
+                 Mücahit BİRBEN
+                </h3>
+                <input
+                  type="text"
+                  id="yardimci7Email"
+                  placeholder="E-posta girin"
+                  value="mucahit.birben@gebze.bel.tr"
+                />
+                <input
+                  type="text"
+                  id="yardimci7Telefon"
+                  placeholder="Telefon girin"
+                  value="0 262 642 04 30"
+                />
+                 <input
+                  type="text"
+                  id="yardimci7Biyografi"
+                  placeholder="Biyografi girin"
+                 
+                />
+                
+                <div
+                  class="dropdown"
+                  style="position: absolute; top: 12px; right: 45px; z-index: 2"
+                >
+                  <button
+                    type="button"
+                    class="photo-btn dropdownBtn"
+                    style="
+                      padding: 6px;
+                      background: #ececec;
+                      color: #ea5b23;
+                      border: 1px solid #d0d0d0;
+                      border-radius: 50%;
+                      width: 36px;
+                      height: 36px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                  <img src="../assets/images/menu-burger.png" alt="Burger" style="width: 20px; height: 20px; border: none !important; margin-top: 10px;">
+                  </button>
+                  <div
+                    class="dropdown-content"
+                    style="
+                      display: none;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      background: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 6px;
+                      min-width: 180px;
+                      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                      z-index: 10;
+                      text-align: left;
+                    "
+            
+
+                  >
+                    <a
+                      href="#"
+                      class="dropdownPhotoChange"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="3"
+                          y="7"
+                          width="18"
+                          height="13"
+                          rx="2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="12"
+                          cy="13.5"
+                          r="3.5"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Fotoğrafı Değiştir
+                    </a>
+      
+                    <a
+                      href="#"
+                      class="dropdownSaveChanges"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 14px;
+                        color: #333;
+                        text-decoration: none;
+                        gap: 8px;
+                        font-size: 15px;
+                      "
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="17 21 17 13 7 13 7 21"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                        <polyline
+                          points="7 3 7 8 15 8"
+                          stroke="#2041c7"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      Değişiklikleri Kaydet
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-content" style="display: none;">
+                <a href="#" class="dropdownPhotoChange">Fotoğrafı Değiştir</a>
+                <a href="#" class="dropdownSaveChanges">Değişiklikleri Kaydet</a>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+          <footer style="height: 200px; opacity: 0"></footer>
+
+          <!-- latest jquery-->
+          <script src="../assets/js/jquery-3.2.1.min.js"></script>
+          <!-- Bootstrap js-->
+          <script src="../assets/js/bootstrap/popper.min.js"></script>
+          <script src="../assets/js/bootstrap/bootstrap.js"></script>
+          <!-- feather icon js-->
+          <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+          <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+          <!-- Sidebar jquery-->
+          <script src="../assets/js/sidebar-menu.js"></script>
+          <script src="../assets/js/config.js"></script>
+          <!-- Plugins JS start-->
+ 
+          <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+          <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+          <script src="../assets/js/typeahead-search/handlebars.js"></script>
+          <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+          <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+          <!-- Theme js-->
+          <script src="../assets/js/script.js"></script>
+          <!-- Bootstrap JS + Popper -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+          <!-- <script src="../assets/js/theme-customizer/customizer.js"></script> -->
+          <!-- Plugin used-->
+
+ <!-- Sayfanın Script kodlarını içeren sayfaya alttaki linke ctrl+click yaparak ulaşabilirsiniz -->
+         <script src="../ltr/JavaScript/yardımcıDuzenle.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

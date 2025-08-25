@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+  <meta name="keywords"
+    content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="pixelstrap">
+  <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+  <title>Haberler - Gebze Belediyesi Admin Paneli</title>
+  <!-- Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <!-- Font Awesome-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+  <!-- ico-font-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
+  <!-- Themify icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+  <!-- Flag icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
+  <!-- Feather icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
+  <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+  <!-- Haberler sayfası özel CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/haberler.css">
+
+</head>
+
+<body>
+  <!-- Loader starts-->
+  <div class="loader-wrapper">
+    <div class="loader bg-white">
+      <div class="whirly-loader"> </div>
+    </div>
+  </div>
+  <!-- Loader ends-->
+  <!-- page-wrapper Start-->
+  <div class="page-wrapper">
+    <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+      <div class="page-body">
+        <div class="container-fluid">
+          <div class="page-header">
+            <div class="row">
+              <div class="col">
+                <div class="page-header-left">
+                  <h3>Haberler</h3>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item active">Haberler</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Araç çubuğu (Ekle / Sil) -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="margin-top: -10px">
+          <div class="container-fluid d-flex justify-content-end" id="nav">
+            <button class="buton ekle-butonu" onclick="ekle()">
+              <div class="icon arti"></div>
+              <span>Ekle</span>
+            </button>
+            <button class="buton sil-butonu" onclick="sil()">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                aria-hidden="true" focusable="false">
+                <path
+                  d="M3 6h18v2H3V6zm2 3h14l-1.5 12.5a1 1 0 01-1 .5H8a1 1 0 01-1-.5L5 9zm4 2v7h2v-7H9zm4 0v7h2v-7h-2z" />
+              </svg>
+              <span>Sil</span>
+            </button>
+          </div>
+        </nav>
+        <br />
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+          <!-- Haberler Tablosu -->
+          <div class="container-sm">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 3%"><input type="checkbox" id="ana-checkbox" style="width: 20px"></th>
+                  <th scope="col" style="width: 12%">Haber Resmi</th>
+                  <th scope="col" style="width: 14%">Haber Başlığı</th>
+                  <th scope="col" style="width: 14%">Kategori</th>
+                  <th scope="col" style="width: 10%">Tarih</th>
+                  <th scope="col" style="width: 18%">Açıklama</th>
+                  <th scope="col" style="width: 18%; text-align: right">İşlemler</th>
+                </tr>
+              </thead>
+              <tbody id="tableContent">
+                <tr class="baskanlik">
+                  <td><input class="checkbox-item" type="checkbox" style="width: 20px"></td>
+                  <td><img src="../assets/images/gebze-belediyesi.ico" alt="gebze-belediyesi-img" width="30"
+                      height="30"></td>
+                  <td class="news dot" title="Ekonomide Büyüme Rakamları Açıklandı">Ekonomide Büyüme Rakamları Açıklandı
+                  </td>
+                  <td class="management">Başkanlık</td>
+                  <td class="date">19.06.2024</td>
+                  <td class="exp dot" title="Bu yılın ikinci çeyreğinde ekonomi %5.2 büyüdü">Bu yılın ikinci çeyreğinde
+                    ekonomi %5.2 büyüdü</td>
+                  <td style="text-align: right">
+                    <button class="btn btn-primary btn-sm" onclick="editNews()">Düzenle</button>
+                    <button class="btn btn-danger btn-sm" onclick="remove()">Sil</button>
+                  </td>
+                </tr>
+                <tr class="baskanlik">
+                  <td><input class="checkbox-item" type="checkbox" style="width: 20px"></td>
+                  <td><img src="../assets/images/gebze-belediyesi.ico" alt="gebze-belediyesi-img" width="30"
+                      height="30"></td>
+                  <td class="news dot" title="Basketbol Takımımız Gruplardan Çıktı">Basketbol Takımımız Gruplardan Çıktı
+                  </td>
+                  <td class="management">Başkanlık</td>
+                  <td class="date">15.09.2023</td>
+                  <td class="exp dot" title="Turnuvada bir üst tura yükseldi">Turnuvada bir üst tura yükseldi</td>
+                  <td style="text-align: right">
+                    <button class="btn btn-primary btn-sm" onclick="editNews()">Düzenle</button>
+                    <button class="btn btn-danger btn-sm" onclick="remove()">Sil</button>
+                  </td>
+                </tr>
+                <!-- ... diğer satırlar ... -->
+              </tbody>
+            </table>
+          </div>
+          <!-- /Haberler Tablosu -->
+        </div>
+
+        <footer style="height: 200px; opacity: 0"></footer>
+
+        <!-- latest jquery-->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap js-->
+        <script src="../assets/js/bootstrap/popper.min.js"></script>
+        <script src="../assets/js/bootstrap/bootstrap.js"></script>
+        <!-- feather icon js-->
+        <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+        <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+        <!-- Sidebar jquery-->
+        <script src="../assets/js/sidebar-menu.js"></script>
+        <script src="../assets/js/config.js"></script>
+        <!-- Plugins JS start-->
+        <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+        <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+        <script src="../assets/js/typeahead-search/handlebars.js"></script>
+        <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+        <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+        <!-- Theme js-->
+        <script src="../assets/js/script.js"></script>
+        <!-- Bootstrap JS + Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../ltr/JavaScript/haberler.js"></script>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

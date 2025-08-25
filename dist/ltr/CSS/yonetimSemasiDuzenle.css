@@ -1,0 +1,155 @@
+.logo-img {
+  height: 200px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+}
+
+.index-img {
+  height: 70px !important;
+  /* Boyutu küçültür */
+  object-fit: contain;
+  display: block;
+  margin-right: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.editable-text {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  font: inherit !important;
+  width: 100% !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+.baskanİsmi-text {
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #3f3b3b;
+  margin-bottom: 10px;
+}
+
+.photo-section {
+  flex: 1;
+  text-align: center;
+}
+
+.photo-section img {
+  width: 400px;
+  max-width: 280px;
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.photo-btn {
+  background-color: #5a5ad4;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.photo-btn:hover {
+  opacity: 0.9;
+}
+
+.info-section {
+  flex: 2;
+  text-align: left;
+}
+
+.info-section h2 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 500;
+  color: #2041c7;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0 20px;
+}
+
+.mudurlukler-title {
+  color: #888;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.mudurlukler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mudurluk-card {
+  background-color: #5c6fbd;
+  color: white;
+  padding: 6px;
+  border-radius: 8px;
+  flex: 1 1 calc(33.33% - 10px);
+  text-align: left;
+}
+
+.mudurluk-card h3 {
+  font-size: 1.2em;
+}
+.mudurluk-card p {
+  font-size: 0.8em;
+}
+
+.edit-btn,
+.save-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #c46e46;
+  color: white;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  opacity: 0.9;
+}
+
+.file-input {
+  display: none;
+}

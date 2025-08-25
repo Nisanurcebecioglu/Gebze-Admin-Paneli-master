@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+  <meta name="keywords"
+    content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="pixelstrap">
+  <link rel="icon" href="../assets/images/gebze-belediyesi.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images//gebze-belediyesi.ico" type="image/x-icon">
+  <title>Başkan Düzenleme Ekranı</title>
+  <!-- Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <!-- Font Awesome-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
+  <!-- ico-font-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
+  <!-- Themify icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
+  <!-- Flag icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
+  <!-- Feather icon-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
+  <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+  <!-- Plugins css Ends-->
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link id="color" rel="stylesheet" href="../assets/css/light-1.css" media="screen">
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+   <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ltr/CSS/baskanDuzenle.css"
+    />
+
+</head>
+
+<body>
+  <!-- Loader starts-->
+  <div class="loader-wrapper">
+    <div class="loader bg-white">
+      <div class="whirly-loader"> </div>
+    </div>
+  </div>
+  <!-- Loader ends-->
+  <!-- page-wrapper Start-->
+  <div class="page-wrapper">
+    <!-- Page Header Start-->
+    <div data-include="partials/header.html"></div>
+    <!-- Page Header Ends -->
+    <!-- Page Body Start-->
+    <div class="page-body-wrapper">
+      <!-- Page Sidebar Start-->
+      <div data-include="partials/sidebar.html"></div>
+      <!-- Page Sidebar Ends-->
+
+      <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-header">
+              <div class="row">
+                <div class="col" style="height: 50px">
+                  <div class="page-header-left">
+                    <h3 style="margin-bottom: 150px">
+                      Başkan
+                    </h3>
+
+                    <ol
+                      class="breadcrumb"
+                      style="margin-left: -100px; margin-bottom: 70px"
+                    >
+                      <li class="breadcrumb-item">
+                        <a href="index.html"><i data-feather="home"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="Kurumsal - Yönetim.html"> Yönetim</a>
+                      </li>
+                      <li class="breadcrumb-item active">
+                        Başkan
+
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+       
+
+        <!-- İçeriklerin Yükleneceği Alan -->
+        <div id="icerikler">  
+             <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <div class="card" style="padding: 40px 30px 30px 30px; border-radius: 16px; margin-top: 30px; position: relative;">
+              
+
+              <!-- İsim -->
+              <div style="margin-bottom: 20px; margin-top: 30px;">
+                <label style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">İsim:</label>
+                <input
+                  type="text"
+                  id="isim"
+                  value="Zinnur BÜYÜKGÖZ"
+                  style="width: 100%; max-width: 1100px; max-height: 200px; display: block; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; text-align: left;"
+                />
+              </div>
+              <!-- Biyografi -->
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">Biyografi:</label>
+                <textarea
+                  id="biyografi"
+                  rows="8"
+                  style="width: 100%; max-width: 1100px; height: 250px !important ;margin: 0 auto; display: block; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"
+                >1964 yılında Erzurum’da doğdu. İlköğretim tahsilini 1975’te Bakırköy Koca Sinan İlkokulu’nda ve 1978’de Kadıköy İmam Hatip Ortaokulu’nda tamamladı. 1983’te ise Gebze İmam Hatip Lisesi’nden mezun oldu. 1987’de Yıldız Teknik Üniversitesi Mimarlık Fakültesi’nden Şehir ve Bölge Plancısı unvanıyla mezun oldu. 1987-1989 yılları arasında aynı üniversitede Şehir ve Bölge Planlaması dalında yüksek lisansını tamamladı. 33 Yıldan bu yana ise Şehir Plancısı unvanıyla hizmet etmeye devam etmektedir. Evli ve dört çocuk babasıdır. Refah Partisi’nden Darıca Belde Başkanlığı ve Gebze Yönetim Kurulu Üyeliği ile Fazilet Partisi’nden Kocaeli İl Yönetimi İcra Kurulu Üyeliği yapmıştır. 2004-2009 yılları arasında Gebze Belediyesi Teknik Başkan Yardımcılığı ve Belediye Meclis Üyeliği, Kocaeli Büyükşehir Belediyesi Meclis Üyeliği ve İmar Komisyon Üyeliği görevlerinde bulunmuştur. Gebze ve Kocaeli’nde siyasi görevlerde bulunmanın yanı sıra, sivil toplum kuruluşlarında ve birçok farklı platformlarda faaliyetler sürdürmüştür. 2004’ten itibaren İstanbul Kültür Varlıklarını Koruma Bölge Kurulu ile Bursa ve Kocaeli Kültür Varlıklarını Koruma Bölge Kurulları’nda üyelik yapmıştır. Türkiye geneli İdare Mahkemeleri’nde Bilirkişi unvanıyla adaletin tecellisine yardımcı olmaya gayret etmiştir. 2014-2016 yılları arasında İstanbul Ticaret Odası Proje Danışma Kurul Üyesi olarak çalışmıştır. 2014’ten bu yana ise Teknopark İstanbul Teknoloji Bölgesi’nde Proje Danışma Kurulu Üyeliği yapmaktadır. Ocak 2019 itibarıyla Kültür Varlıklarını Koruma Bölge Kurulu Üyeliği’nden ayrılmıştır. 31 Mart 2019 Mahalli İdareler Seçimi’nde halkımızın teveccühü ile Gebze Belediye Başkanı seçilmiştir ve halen bu görevi yürütmeye devam etmektedir.</textarea>
+              </div>
+
+
+                            <div >
+                <img
+                  id="baskanImage"
+                  src="../assets/images/kurumsal gebze/baskansayfasi.jpg"
+                  style="object-fit: cover; border-radius: 8px; display: block; margin-left: auto; margin-right: 750px !important; text-align: left;width: 450px; height: 300px; margin-top: 30px;"
+                />
+
+                </div>
+
+                  <div style="position: absolute;
+               bottom: 30px;
+                right: 30px; 
+
+                padding: 20px; 
+                border-radius: 8px; 
+                text-align: center; 
+                ">
+                <div>
+                <img
+                  id="imzaImage"
+                  src="../assets/images/kurumsal gebze/imza.png"
+                  style="width: 300px; height: 200px; object-fit: contain; margin-bottom: -60px;"
+                />
+                </div>
+
+              </div>
+
+              <!-- Dropdown Menü -->
+<div style="position: relative; display: inline-block;">
+  <button onclick="toggleDropdown()" style="background: #f7971e; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 30px;">
+    Düzenle
+  </button>
+
+  <div id="dropdownMenu" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; padding: 10px; border-radius: 6px; width: 250px;">
+    
+    <!-- Fotoğraf Değiştir -->
+    <button onclick="document.getElementById('photoUpload').click()" style="width: 100%; margin-bottom: 8px;"> Fotoğraf Değiştir</button>
+    <input type="file" id="photoUpload" accept="image/*" style="display: none" onchange="previewImage(event, 'photo')" />
+
+    <!-- İmza Değiştir -->
+    <button onclick="document.getElementById('signatureUpload').click()" style="width: 100%; margin-bottom: 8px;"> İmza Değiştir</button>
+    <input type="file" id="signatureUpload" accept="image/*" style="display: none" onchange="previewImage(event, 'signature')" />
+
+    <!-- Biyografi Düzenle -->
+
+
+    <!-- Kaydet -->
+    <button onclick="saveAll()" style="background: #28a745; color: white; border: none; padding: 8px; border-radius: 4px; width: 100%;"> Kaydet</button>
+  </div>
+</div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <footer style="height: 200px; opacity: 0"></footer>
+
+        <!-- latest jquery-->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap js-->
+        <script src="../assets/js/bootstrap/popper.min.js"></script>
+        <script src="../assets/js/bootstrap/bootstrap.js"></script>
+        <!-- feather icon js-->
+        <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+        <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+        <!-- Sidebar jquery-->
+        <script src="../assets/js/sidebar-menu.js"></script>
+        <script src="../assets/js/config.js"></script>
+        <!-- Plugins JS start-->
+
+        <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+        <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+        <script src="../assets/js/typeahead-search/handlebars.js"></script>
+        <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+        <!-- Plugins JS Ends-->
+        <script src="../assets/js/html-include.js"></script>
+        <!-- Theme js-->
+        <script src="../assets/js/script.js"></script>
+        <!-- Bootstrap JS + Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        
+         <!-- Sayfanın Script kodlarını içeren sayfaya alttaki linke ctrl+click yaparak ulaşabilirsiniz -->
+        
+        <script src="../ltr/JavaScript/baskanDuzenle.js"></script>
+      
+</body>
+
+</html>
